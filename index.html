@@ -7,16 +7,16 @@
     <!-- 全螢幕 Web App 支援 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="京阪旅記">
+    <meta name="apple-mobile-web-app-title" content="東京旅記">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#fbf7ee">
-    <meta name="application-name" content="京阪旅記">
+    <meta name="application-name" content="東京旅記">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
     <link rel="apple-touch-icon" href="tower.png">
 
-    <title>京阪旅記 </title>
+    <title>東京旅記</title>
     <!-- 引入 Cinzel (英數標籤/時間), Noto Serif TC (和風宋體標題/內文) -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 
@@ -3781,7 +3781,7 @@
             margin: 0 -14px 18px !important;
             padding: 8px 12px 9px !important;
             display: grid !important;
-            grid-template-columns: repeat(5, minmax(0,1fr)) !important;
+            grid-template-columns: repeat(6, minmax(0,1fr)) !important;
             gap: 5px !important;
             background: rgba(247,241,231,.985) !important;
             border-bottom: 1px solid rgba(158,126,96,.10) !important;
@@ -4377,7 +4377,7 @@ body #page-day-detail .v6-day-selector {
     margin: 0 -14px 18px !important;
     padding: calc(env(safe-area-inset-top, 0px) + 20px) 12px 9px !important;
     display: grid !important;
-    grid-template-columns: repeat(5, minmax(0,1fr)) !important;
+    grid-template-columns: repeat(6, minmax(0,1fr)) !important;
     gap: 5px !important;
     background: linear-gradient(
         180deg,
@@ -4461,18 +4461,18 @@ body #page-day-detail .v6-day-selector::before {
         <!-- [1. 首頁] -->
         <section id="view-splash" class="view-section active">
             <main class="page">
-                <div class="top-tag">二〇二六 · 九月</div>
+                <div class="top-tag">二〇二六 · 十月</div>
                 <div class="header-content">
                     <img src="tower.png" class="tower-icon" alt="Tower" onerror="this.style.opacity='0'">
-                    <div class="main-title">京<span class="han-char">阪<span class="red-dot"></span></span></div>
+                    <div class="main-title">東京</div>
                     <div class="sub-title-ch">旅記</div>
-                    <div class="collage-text">KYOTO & OSAKA / 5 DAYS</div>
+                    <div class="collage-text">TOKYO / 6 DAYS</div>
                     <div class="gold-divider">
                         <div class="gold-line"></div>
                         <img src="maple.png" alt="maple" style="width: 18px; height: auto; opacity: 0.9;" onerror="this.style.display='none'">
                         <div class="gold-line"></div>
                     </div>
-                    <div class="jp-quote">さあ、旅を始めましょう。</div>
+                    <div class="jp-quote">東京の旅を始めましょう。</div>
                 </div>
 
                 <div class="stamp-container" id="stampArea">
@@ -4490,7 +4490,7 @@ body #page-day-detail .v6-day-selector::before {
         <section id="view-directory" class="view-section">
             <div class="directory-scale">
             <div class="dir-header">
-                <h2>京阪五日旅記</h2>
+                <h2>東京六日旅記</h2>
                 <span class="index-label">JOURNEY INDEX</span>
             </div>
             
@@ -4499,6 +4499,7 @@ body #page-day-detail .v6-day-selector::before {
             <!-- 輪播小圓點 -->
             <div class="carousel-dots" id="carouselDots">
                 <span class="dot active"></span>
+                <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
@@ -4527,69 +4528,23 @@ body #page-day-detail .v6-day-selector::before {
                     <div class="utility-popup-head">
                         <div class="utility-popup-kicker">FLIGHT INFORMATION</div>
                         <h2 class="utility-popup-title">航班資訊</h2>
-                        <div class="utility-popup-sub">桃園 ⇄ 關西｜China Airlines</div>
+                        <div class="utility-popup-sub">台灣 ⇄ 東京｜10/3～10/8</div>
                         <button class="utility-popup-close" type="button" onclick="closeDetail('page-air')" aria-label="關閉">×</button>
                     </div>
                     <div class="utility-glass-panel">
-                        <div class="utility-segment" aria-label="航班切換">
-                            <button id="flightTabOutbound" class="active" type="button" onclick="switchFlightTab('outbound')">去程</button>
-                            <button id="flightTabReturn" type="button" onclick="switchFlightTab('return')">回程</button>
+                        <div class="info-card">
+                            <h3 class="info-card-title">🛫 10/3｜前往東京</h3>
+                            <ul class="detail-list">
+                                <li>抵達日本後前往 <span class="badge">Poka Stay Kamata 暖居浦田</span></li>
+                                <li>實際航班號、起飛與降落時間依你的機票資訊為準。</li>
+                            </ul>
                         </div>
-
-                        <div id="flightPanelOutbound" class="flight-switch-panel active">
-                            <div class="flight-ticket">
-                                <div class="ticket-main">
-                                    <div class="ticket-airline"><span>CHINA AIRLINES 中華航空</span><span class="flight-no">CI 152</span></div>
-                                    <div class="ticket-loc-row">
-                                        <div class="loc-box left"><h3>TPE</h3><p>桃園機場</p><span>Taoyuan Apt</span></div>
-                                        <div class="ticket-arrow-zone"><span class="plane-icon">✈</span></div>
-                                        <div class="loc-box right"><h3>KIX</h3><p>關西機場</p><span>Kansai Apt</span></div>
-                                    </div>
-                                </div>
-                                <div class="ticket-divider"><div class="notch notch-left"></div><div class="notch notch-right"></div></div>
-                                <div class="ticket-stub">
-                                    <div class="grid-info">
-                                        <div class="info-item-box"><span>Date 日期</span><strong>09/26 (六)</strong><p>Sep 26 (Sat)</p></div>
-                                        <div class="info-item-box"><span>Depart 起飛</span><strong>09 : 00</strong><p>Terminal 2<br><b>第二航廈</b></p></div>
-                                        <div class="info-item-box"><span>Arrive 抵達</span><strong>12 : 50</strong><p>Terminal 1<br><b>第一航廈</b></p></div>
-                                    </div>
-                                    <div class="grid-info">
-                                        <div class="info-item-box"><span>Aircraft 機型</span><strong>A350-900</strong><p>空中巴士</p></div>
-                                        <div class="info-item-box"><span>Class 艙等</span><strong>經濟 (T)</strong><p>Economy</p></div>
-                                        <div class="info-item-box"><span>Duration 時間</span><strong>2h 50m</strong><p>2小時50分</p></div>
-                                    </div>
-                                    <div class="flight-extra-banner"><span class="banner-title">💼 免費托運行李額度 (Baggage)</span><span>每人可託運 <b>2 件各 23 公斤</b> (2 Pieces / 23kg each)</span></div>
-                                    <div class="barcode-area"><div class="barcode-lines"></div><div class="barcode-num">TPE-KIX-CI152</div></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="flightPanelReturn" class="flight-switch-panel">
-                            <div class="flight-ticket ticket-ticket-back">
-                                <div class="ticket-main">
-                                    <div class="ticket-airline"><span>CHINA AIRLINES 中華航空</span><span class="flight-no">CI 153</span></div>
-                                    <div class="ticket-loc-row">
-                                        <div class="loc-box left"><h3>KIX</h3><p>關西機場</p><span>Kansai Apt</span></div>
-                                        <div class="ticket-arrow-zone"><span class="plane-icon">✈</span></div>
-                                        <div class="loc-box right"><h3>TPE</h3><p>桃園機場</p><span>Taoyuan Apt</span></div>
-                                    </div>
-                                </div>
-                                <div class="ticket-divider"><div class="notch notch-left"></div><div class="notch notch-right"></div></div>
-                                <div class="ticket-stub">
-                                    <div class="grid-info">
-                                        <div class="info-item-box"><span>Date 日期</span><strong>09/30 (三)</strong><p>Sep 30 (Wed)</p></div>
-                                        <div class="info-item-box"><span>Depart 起飛</span><strong>14 : 00</strong><p>Terminal 1<br><b>第一航廈</b></p></div>
-                                        <div class="info-item-box"><span>Arrive 抵達</span><strong>16 : 00</strong><p>Terminal 2<br><b>第二航廈</b></p></div>
-                                    </div>
-                                    <div class="grid-info">
-                                        <div class="info-item-box"><span>Aircraft 機型</span><strong>A321NEO</strong><p>空中巴士</p></div>
-                                        <div class="info-item-box"><span>Class 艙等</span><strong>經濟 (T)</strong><p>Economy</p></div>
-                                        <div class="info-item-box"><span>Duration 時間</span><strong>3h 00m</strong><p>3小時00分</p></div>
-                                    </div>
-                                    <div class="flight-extra-banner"><span class="banner-title">💼 免費托運行李額度 (Baggage)</span><span>每人可託運 <b>2 件各 23 公斤</b> (2 Pieces / 23kg each)</span></div>
-                                    <div class="barcode-area"><div class="barcode-lines"></div><div class="barcode-num">KIX-TPE-CI153</div></div>
-                                </div>
-                            </div>
+                        <div class="info-card">
+                            <h3 class="info-card-title">🛬 10/8｜東京回國</h3>
+                            <ul class="detail-list">
+                                <li><span class="badge">中午班機</span> 由東京返回台灣</li>
+                                <li>預留住宿 → 機場 → 報到安檢的完整緩衝時間。</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -4603,7 +4558,7 @@ body #page-day-detail .v6-day-selector::before {
                     <div class="utility-popup-head">
                         <div class="utility-popup-kicker">REAL-TIME TRANSIT</div>
                         <h2 class="utility-popup-title">即時車況</h2>
-                        <div class="utility-popup-sub">京都・大阪交通運行資訊</div>
+                        <div class="utility-popup-sub">東京交通運行資訊</div>
                         <button class="utility-popup-close" type="button" onclick="closeDetail('page-train')" aria-label="關閉">×</button>
                     </div>
                     <div class="utility-glass-panel">
@@ -4615,9 +4570,9 @@ body #page-day-detail .v6-day-selector::before {
                                         <div class="traffic-circle yahoo-circle"><img src="yahoo.png" alt="Yahoo! 交通資訊"></div>
                                         <div><div class="traffic-source-title">Yahoo! 交通資訊</div><div class="traffic-source-sub">全國鐵道運行資訊</div></div>
                                     </a>
-                                    <a class="traffic-circle-link navitime-link" href="https://japantravel.navitime.com/zh-tw/area/jp/railroad/00000086/" target="_blank" rel="noopener">
+                                    <a class="traffic-circle-link navitime-link" href="https://japantravel.navitime.com/zh-tw/area/jp/railroad/" target="_blank" rel="noopener">
                                         <div class="traffic-circle navitime-circle"><img src="navitime1.png" alt="NAVITIME 路線資訊"></div>
-                                        <div><div class="traffic-source-title">NAVITIME</div><div class="traffic-source-sub">京都地鐵路線資訊</div></div>
+                                        <div><div class="traffic-source-title">NAVITIME</div><div class="traffic-source-sub">東京鐵道路線資訊</div></div>
                                     </a>
                                 </div>
                                 <div class="traffic-note">點擊後會開啟對應網頁，需要網路連線。</div>
@@ -4837,26 +4792,12 @@ body #page-day-detail .v6-day-selector::before {
                             <span class="top-chip-title">Home</span>
                             <span class="top-chip-sub">首頁</span>
                         </button>
-                        <button type="button" class="tab-item" id="tab-d1" onclick="renderDay(1)" aria-label="Day 1">
-                            <span class="top-chip-title">Day 1</span>
-                            <span class="top-chip-sub">Sep 26 (Sat)</span>
-                        </button>
-                        <button type="button" class="tab-item" id="tab-d2" onclick="renderDay(2)" aria-label="Day 2">
-                            <span class="top-chip-title">Day 2</span>
-                            <span class="top-chip-sub">Sep 27 (Sun)</span>
-                        </button>
-                        <button type="button" class="tab-item" id="tab-d3" onclick="renderDay(3)" aria-label="Day 3">
-                            <span class="top-chip-title">Day 3</span>
-                            <span class="top-chip-sub">Sep 28 (Mon)</span>
-                        </button>
-                        <button type="button" class="tab-item" id="tab-d4" onclick="renderDay(4)" aria-label="Day 4">
-                            <span class="top-chip-title">Day 4</span>
-                            <span class="top-chip-sub">Sep 29 (Tue)</span>
-                        </button>
-                        <button type="button" class="tab-item" id="tab-d5" onclick="renderDay(5)" aria-label="Day 5">
-                            <span class="top-chip-title">Day 5</span>
-                            <span class="top-chip-sub">Sep 30 (Wed)</span>
-                        </button>
+                        <button type="button" class="tab-item" id="tab-d1" onclick="renderDay(1)" aria-label="Day 1"><span class="top-chip-title">Day 1</span><span class="top-chip-sub">Oct 3</span></button>
+                        <button type="button" class="tab-item" id="tab-d2" onclick="renderDay(2)" aria-label="Day 2"><span class="top-chip-title">Day 2</span><span class="top-chip-sub">Oct 4</span></button>
+                        <button type="button" class="tab-item" id="tab-d3" onclick="renderDay(3)" aria-label="Day 3"><span class="top-chip-title">Day 3</span><span class="top-chip-sub">Oct 5</span></button>
+                        <button type="button" class="tab-item" id="tab-d4" onclick="renderDay(4)" aria-label="Day 4"><span class="top-chip-title">Day 4</span><span class="top-chip-sub">Oct 6</span></button>
+                        <button type="button" class="tab-item" id="tab-d5" onclick="renderDay(5)" aria-label="Day 5"><span class="top-chip-title">Day 5</span><span class="top-chip-sub">Oct 7</span></button>
+                        <button type="button" class="tab-item" id="tab-d6" onclick="renderDay(6)" aria-label="Day 6"><span class="top-chip-title">Day 6</span><span class="top-chip-sub">Oct 8</span></button>
                     </nav>
                 </div>
 
@@ -4987,225 +4928,289 @@ body #page-day-detail .v6-day-selector::before {
         }
 
         const TRIP_DATES = {
-            "2026-09-26": 1,
-            "2026-09-27": 2,
-            "2026-09-28": 3,
-            "2026-09-29": 4,
-            "2026-09-30": 5
+            "2026-10-03": 1,
+            "2026-10-04": 2,
+            "2026-10-05": 3,
+            "2026-10-06": 4,
+            "2026-10-07": 5,
+            "2026-10-08": 6
         };
 
         // 乘車資訊：Day 1~5 共用資料（包車/飛機不做路線彈窗）
-        const RIDE_ROUTE_CONFIG = {
-            '1-14:00': {
-                head:'搭乘 HARUKA', jp:'関西空港から、京都へ', lineTitle:'JR 關空特急 HARUKA', lineSub:'HARUKA / JR West',
-                direction:'京都方向', directionSub:'京都站方面', arrow:'→', theme:'#3f7898', duration:'約 80～90 分鐘', stopsText:'主要停靠',
-                stations:[
-                    {code:'KIX',name:'關西機場',en:'Kansai Airport'},
-                    {code:'JR',name:'天王寺',en:'Tennoji'},
-                    {code:'JR',name:'大阪',en:'Osaka'},
-                    {code:'JR',name:'新大阪',en:'Shin-Osaka'},
-                    {code:'JR',name:'京都',en:'Kyoto'}
-                ], liveUrl:'https://transit.yahoo.co.jp/diainfo/'
-            },
-            '1-16:00': {
-                head:'京都車站搭地鐵', jp:'京のまちへ、地下鉄で', lineTitle:'京都市營地下鐵 烏丸線', lineSub:'Karasuma Line / 京都市営地下鉄',
-                direction:'南行', directionSub:'四条・烏丸方面', arrow:'↓', theme:'#2e6b4f', duration:'約 4 分鐘', stopsText:'2 站',
-                stations:[{code:'K11',name:'京都',en:'Kyoto'},{code:'K10',name:'五条',en:'Gojo'},{code:'K09',name:'四条',en:'Shijo'}], liveUrl:'https://transit.yahoo.co.jp/diainfo/'
-            },
-            '1-20:30': {
-                head:'四条站搭車返回京都車站', jp:'四条から、京都駅へ', lineTitle:'京都市營地下鐵 烏丸線', lineSub:'Karasuma Line / 京都市営地下鉄',
-                direction:'京都方向', directionSub:'京都站方面', arrow:'↑', theme:'#2e6b4f', duration:'約 3 分鐘', stopsText:'2 站',
-                stations:[{code:'K09',name:'四条',en:'Shijo'},{code:'K10',name:'五条',en:'Gojo'},{code:'K11',name:'京都',en:'Kyoto'}], liveUrl:'https://transit.yahoo.co.jp/diainfo/'
-            },
-            '2-07:30': {
-                head:'京都車站搭 JR', jp:'京都から、稲荷へ', lineTitle:'JR 奈良線', lineSub:'JR Nara Line',
-                direction:'奈良方向', directionSub:'稻荷・奈良方面', arrow:'→', theme:'#5f6f7c', duration:'約 5 分鐘', stopsText:'2 站',
-                stations:[{code:'JR',name:'京都',en:'Kyoto'},{code:'JR',name:'東福寺',en:'Tofukuji'},{code:'JR',name:'稻荷',en:'Inari'}], liveUrl:'https://transit.yahoo.co.jp/diainfo/'
-            },
-            '2-10:05': {
-                head:'搭乘京阪電車', jp:'伏見稲荷から、清水五条へ', lineTitle:'京阪本線', lineSub:'Keihan Main Line',
-                direction:'出町柳方向', directionSub:'七条・清水五条方面', arrow:'↑', theme:'#3b7d5a', duration:'約 10 分鐘', stopsText:'4 站',
-                stations:[
-                    {code:'KH34',name:'伏見稻荷',en:'Fushimi-Inari'},
-                    {code:'KH35',name:'鳥羽街道',en:'Tobakaido'},
-                    {code:'KH36',name:'東福寺',en:'Tofukuji'},
-                    {code:'KH37',name:'七条',en:'Shichijo'},
-                    {code:'KH38',name:'清水五条',en:'Kiyomizu-Gojo'}
-                ], liveUrl:'https://transit.yahoo.co.jp/diainfo/'
-            },
-            '4-08:30': {
-                head:'搭地鐵前往大阪城', jp:'谷町九丁目から、谷町四丁目へ', lineTitle:'大阪 Metro 谷町線', lineSub:'Tanimachi Line / Osaka Metro',
-                direction:'大日方向', directionSub:'谷町四丁目方面', arrow:'↑', theme:'#8d5bb4', duration:'約 4 分鐘', stopsText:'2 站',
-                stations:[{code:'T25',name:'谷町九丁目',en:'Tanimachi 9-chome'},{code:'T24',name:'谷町六丁目',en:'Tanimachi 6-chome'},{code:'T23',name:'谷町四丁目',en:'Tanimachi 4-chome'}], liveUrl:'https://transit.yahoo.co.jp/diainfo/'
-            },
-            '4-11:30': {
-                head:'森之宮站搭中央線', jp:'森ノ宮から、大阪港へ', lineTitle:'大阪 Metro 中央線', lineSub:'Chuo Line / Osaka Metro',
-                direction:'夢洲方向', directionSub:'本町・大阪港方面', arrow:'←', theme:'#29804b', duration:'約 20 分鐘', stopsText:'8 站',
-                stations:[
-                    {code:'C19',name:'森之宮',en:'Morinomiya'},{code:'C18',name:'谷町四丁目',en:'Tanimachi 4-chome'},{code:'C17',name:'堺筋本町',en:'Sakaisuji-Hommachi'},
-                    {code:'C16',name:'本町',en:'Hommachi'},{code:'C15',name:'阿波座',en:'Awaza'},{code:'C14',name:'九条',en:'Kujo'},
-                    {code:'C13',name:'弁天町',en:'Bentencho'},{code:'C12',name:'朝潮橋',en:'Asashiobashi'},{code:'C11',name:'大阪港',en:'Osakako'}
-                ], liveUrl:'https://transit.yahoo.co.jp/diainfo/'
-            },
-            '4-17:50': {
-                head:'大阪港站搭車', jp:'大阪港から、本町へ', lineTitle:'大阪 Metro 中央線', lineSub:'Chuo Line / Osaka Metro',
-                direction:'長田方向', directionSub:'本町方面', arrow:'→', theme:'#29804b', duration:'約 15 分鐘', stopsText:'5 站',
-                stations:[{code:'C11',name:'大阪港',en:'Osakako'},{code:'C12',name:'朝潮橋',en:'Asashiobashi'},{code:'C13',name:'弁天町',en:'Bentencho'},{code:'C14',name:'九条',en:'Kujo'},{code:'C15',name:'阿波座',en:'Awaza'},{code:'C16',name:'本町',en:'Hommachi'}], liveUrl:'https://transit.yahoo.co.jp/diainfo/'
-            },
-            '4-18:10': {
-                head:'本町站轉乘', jp:'本町から、心斎橋へ', lineTitle:'大阪 Metro 御堂筋線', lineSub:'Midosuji Line / Osaka Metro',
-                direction:'天王寺方向', directionSub:'心齋橋方面', arrow:'↓', theme:'#d23a42', duration:'約 2 分鐘', stopsText:'1 站',
-                stations:[{code:'M18',name:'本町',en:'Hommachi'},{code:'M19',name:'心齋橋',en:'Shinsaibashi'}], liveUrl:'https://transit.yahoo.co.jp/diainfo/'
-            },
-            '5-10:30': {
-                head:'前往關西機場', jp:'大阪から、関西空港へ', lineTitle:'南海電鐵 / JR 關空快速', lineSub:'Nankai / JR Airport Access',
-                direction:'關西機場方向', directionSub:'依當日選擇路線搭乘', arrow:'→', theme:'#3d7b60', duration:'約 45～50 分鐘', stopsText:'直達／快速',
-                stations:[{code:'大阪',name:'難波周邊',en:'Namba Area'},{code:'KIX',name:'關西機場',en:'Kansai Airport'}], liveUrl:'https://transit.yahoo.co.jp/diainfo/'
-            }
-        };
+        const RIDE_ROUTE_CONFIG = {};
 
         const fullItinerary = {
-            1: {
-                day: 1, date: "2026-09-26", loc: "京都 · 四條河原町", en: "Kyoto - Shijo Kawaramachi",
-                quote: "古都の風情と賑やかな街並み、旅行の始まりを楽しむ一日。",
-                img: "day1-main.webp",
-                nodes: [
-                    { time: "06:00", type: "CAR", icon: "🚗", title: "前往桃園機場", addr: "搭車（開車）前往桃園機場", note: "", map: "", img: "day1-drive-airport.png" },
-                    { time: "06:40", type: "SPOT", icon: "✈️", title: "抵達桃園機場", addr: "第二航廈報到與託運行李", note: "建議起飛前 2.5 小時完成報到", map: "", img: "day1-taoyuan-airport.jpg" },
-                    { time: "09:00", type: "FLIGHT", icon: "🛫", title: "桃園機場起飛", addr: "CI152 中華航空 A359 經濟艙 T", note: "已選位：46A、46B、46C、46D", map: "", img: "day1-flight-takeoff.jpg" },
-                    { time: "12:50", type: "SPOT", icon: "🛬", title: "關西機場降落", addr: "第一航廈通關入境", note: "準備 Visit Japan Web 入境 QR Code", map: "", img: "day1-flight-landing.png" },
-                    { time: "14:00", type: "TRAIN", icon: "🚃", title: "搭乘 HARUKA", addr: "JR 關空特急直達京都", note: "持有電子憑證掃碼進站", map: "", img: "day1-haruka.jpg" },
-                    { time: "15:30", type: "SPOT", icon: "🚉", title: "抵達京都車站", addr: "京都車站下車", note: "", map: "Kyoto+Station", img: "day1-kyoto-station.jpg" },
-                    { time: "15:40", type: "HOTEL", icon: "🏨", title: "近鐵京都站都城市酒店", addr: "近鐵京都站都城市酒店 Check-in", note: "15:00 可 Check-in｜11:00 前 Check-out", map: "Miyako+City+Kintetsu+Kyoto+Station", img: "day1-hotel-checkin.jpg" },
-                    { time: "16:00", type: "TRAIN", icon: "🚉", title: "京都車站搭地鐵", addr: "地鐵烏丸線前往四条站", 
-                      routeCapsules: [
-                          { code: "K11", lineName: "京都", lineClass: "line-karasuma" },
-                          { code: "K09", lineName: "四条", lineClass: "line-karasuma" }
-                      ],
-                      note: "搭乘綠色烏丸線直達", map: "Kyoto+Station", img: "day1-kyoto-subway.png" },
-                    { time: "16:20", type: "SPOT", icon: "🚉", title: "抵達四条站", addr: "烏丸線 K09 四条站", note: "", map: "Shijo+Station+Kyoto", img: "day1-shijo-station.png\" style=\"object-position: 20% center;" },
-                    { time: "17:00", type: "FOOD", icon: "🍜", title: "拉麵千之風訂位", addr: "拉麵千之風", note: "先取號碼牌，可先在附近逛街", map: "Ramen+Sen+No+Kaze+Kyoto", img: "day1-ramen-sennokaze.jpg" },
-                    { time: "17:30", type: "FOOD", icon: "🍜", title: "拉麵千之風用餐", addr: "拉麵千之風享用晚餐", note: "", map: "Ramen+Sen+No+Kaze+Kyoto", img: "day1-ramen-sennokaze1.jpg\" style=\"object-position: center 10%;"},
-                    { time: "18:30", type: "SPOT", icon: "🛍️", title: "河原町逛街", addr: "四條河原町商圈", note: "百貨與特色小店散步", map: "Shijo+Kawaramachi", img: "day1-kawaramachi.webp" },
-                    { time: "20:30", type: "TRAIN", icon: "🚉", title: "四条站搭車返回京都車站", addr: "由四条站搭車返回京都車站", 
-                      routeCapsules: [
-                          { code: "K09", lineName: "四条", lineClass: "line-karasuma" },
-                          { code: "K11", lineName: "京都", lineClass: "line-karasuma" }
-                      ],
-                      note: "乘車時間約 3 分鐘", map: "Shijo+Station+Kyoto", img: "day1-shijo-station.png\" style=\"object-position: 20% center;" },
-                    { time: "20:50", type: "SPOT", icon: "🚉", title: "抵達京都車站", addr: "烏丸線 K11 京都站", note: "", map: "Kyoto+Station", img: "day1-kyoto-station.jpg" },
-                    { time: "21:00", type: "HOTEL", icon: "😴", title: "回酒店休息", addr: "近鐵京都站都城市酒店", note: "早點休息為明天儲備體力", map: "Miyako+City+Kintetsu+Kyoto+Station", img: "day1-hotel-rest.jpg" }
-                ]
+    "1": {
+        "day": 1,
+        "date": "2026-10-03",
+        "loc": "東京 · 抵達日",
+        "en": "Tokyo - Arrival & Chill",
+        "quote": "東京の街にゆっくり馴染みながら、旅の始まりを楽しむ。",
+        "img": "bg.png",
+        "nodes": [
+            {
+                "time": "抵達",
+                "type": "FLIGHT",
+                "icon": "🛬",
+                "title": "抵達東京",
+                "addr": "東京機場 → 前往市區",
+                "note": "實際時間依班機與入境狀況調整，先不排固定餐廳。",
+                "map": "",
+                "img": "bg.png"
             },
-            2: {
-                day: 2, date: "2026-09-27", loc: "京都 · 伏見稻荷・清水寺・祇園", en: "Kyoto - Fushimi Inari, Kiyomizu & Gion",
-                quote: "朝の鳥居から古都の町並みへ、京都らしさを歩いて味わう一日。",
-                img: "day2-main.webp",
-                nodes: [
-                    { time: "06:30", type: "SPOT", icon: "☀️", title: "起床", addr: "起床梳洗準備", note: "", map: "", img: "day1-hotel-rest.jpg" },
-                    { time: "07:00", type: "FOOD", icon: "🍙", title: "出門覓食", addr: "飯店周邊享用早餐", note: "", map: "", img: "day2-breakfast.jpg" },
-                    { time: "07:30", type: "TRAIN", icon: "🚉", title: "京都車站搭 JR", addr: "搭乘 JR 奈良線（棕色）前往伏見稻荷", 
-                      routeCapsules: [
-                          { code: "JR", lineName: "京都", lineClass: "line-jr" },
-                          { code: "JR", lineName: "稻荷", lineClass: "line-jr" }
-                      ],
-                      note: "共 2 站，避開人潮趁早出發", map: "Kyoto+Station", img: "day1-kyoto-subway.png" },
-                    { time: "07:45", type: "SPOT", icon: "🚉", title: "抵達稻荷站", addr: "JR 稻荷站出站即達", note: "", map: "Inari+Station+Kyoto", img: "day2-inari-station.jpg" },
-                    { time: "07:50", type: "SPOT", icon: "⛩️", title: "伏見稻荷大社", addr: "伏見稻荷大社 千本鳥居", note: "建議走到「四の辻」即可折返", map: "Fushimi+Inari+Taisha", img: "day2-fushimi-inari.jpg" },
-                    { time: "10:00", type: "SPOT", icon: "🚶", title: "離開伏見稻荷大社", addr: "步行至京阪伏見稻荷站", note: "", map: "Fushimi+Inari+Taisha", img: "day2-inari-station.jpg" },
-                    { time: "10:05", type: "TRAIN", icon: "🚉", title: "搭乘京阪電車", addr: "京阪本線 前往清水五條", 
-                      routeCapsules: [
-                          { code: "KH34", lineName: "京阪本線", lineClass: "line-keihan-green" },
-                          { code: "KH38", lineName: "京阪本線", lineClass: "line-keihan-blue" }
-                      ],
-                      note: "KH34 伏見稻荷 ➔ KH38 清水五條", map: "Fushimi-Inari+Station", img: "day1-kyoto-subway.png" },
-                    { time: "10:20", type: "SPOT", icon: "🚉", title: "清水五條站", addr: "出站沿五條坂散步往清水寺", note: "", map: "Kiyomizu-Gojo+Station", img: "day2-kiyomizu-gojo-station.jpg" },
-                    { time: "11:00", type: "SPOT", icon: "⛩️", title: "清水寺參觀", addr: "清水寺本堂與音羽之瀧", note: "門票：大人 ¥400", map: "Kiyomizu-dera", img: "day2-kiyomizudera.jpg" },
-                    { time: "12:30", type: "SPOT", icon: "🚶", title: "二三年坂散步", addr: "產寧坂・二年坂", note: "往八坂神社方向漫步", map: "Kiyomizu-dera", img: "day2-sannenzaka-ninenzaka.jpg" },
-                    { time: "13:30", type: "FOOD", icon: "🥢", title: "附近享用午餐", addr: "周邊茶屋或特色餐廳", note: "", map: "", img: "day2-lunch.jpg" },
-                    { time: "14:30", type: "SPOT", icon: "⛩️", title: "八坂神社", addr: "祇園八坂神社", note: "祈求消災與美麗", map: "Yasaka+Shrine+Kyoto", img: "day2-yasaka-shrine.jpg" },
-                    { time: "15:00", type: "SPOT", icon: "🏮", title: "前往花見小路", addr: "步行約 10 分鐘", note: "", map: "Hanamikoji+Street+Kyoto", img: "day2-walk-hanamikoji.jpg" },
-                    { time: "15:20", type: "SPOT", icon: "🌸", title: "抵達花見小路", addr: "京都市東山區花見小路通", note: "建議黃昏時段拍照最美！", map: "Hanamikoji+Street+Kyoto", img: "day2-hanamikoji.webp" },
-                    { time: "16:30", type: "FOOD", icon: "🛍️", title: "祇園商圈逛街・晚餐", addr: "祇園・鴨川周邊", note: "彈性安排晚餐與伴手禮採買", map: "Gion+Kyoto", img: "day2-gion-dinner.jpg" },
-                    { time: "20:00", type: "HOTEL", icon: "😴", title: "回酒店休息", addr: "返回近鐵京都站都城市酒店", note: "15:00 可 Check-in", map: "Miyako+City+Kintetsu+Kyoto+Station", img: "day1-hotel-rest.jpg" }
-                ]
+            {
+                "time": "入住後",
+                "type": "HOTEL",
+                "icon": "🏨",
+                "title": "Poka Stay Kamata 暖居浦田",
+                "addr": "Check-in／放置行李",
+                "note": "住宿固定於此；下午與晚上以 Chill 行程為主。",
+                "map": "Poka Stay Kamata, Kamata, Tokyo",
+                "img": "bg2.png"
             },
-            3: {
-                day: 3, date: "2026-09-28", loc: "天橋立 · 伊根 · 大阪", en: "Amanohashidate - Ine - Osaka",
-                quote: "海と空の景色をたどり、京都から大阪へ移動する一日。",
-                img: "day3-main.jpg",
-                nodes: [
-                    { time: "07:30", type: "SPOT", icon: "☀️", title: "起床盥洗", addr: "退房準備出發", note: "需帶齊行李出發", map: "", img: "day1-hotel-rest.jpg" },
-                    { time: "08:00", type: "FOOD", icon: "🍙", title: "出門早餐・集合", addr: "京都站八条口巴士站", note: "準時前往集合點", map: "Kyoto+Station", img: "day3-breakfast-meetup.jpg" },
-                    { time: "08:45", type: "BUS", icon: "🚌", title: "巴士出發", addr: "京都站八条口出發前往天橋立", note: "車程約 1.5 小時", map: "Kyoto+Station+Hachijo+Exit", img: "day3-bus-amanohashidate.jpg" },
-                    { time: "10:20", type: "SPOT", icon: "⛩️", title: "抵達天橋立 View Land", addr: "天橋立 View Land 飛龍觀", note: "", map: "Amanohashidate+View+Land", img: "day3-amanohashidate-viewland.webp" },
-                    { time: "10:40", type: "TRAIN", icon: "🚠", title: "搭乘纜車 / 吊椅", addr: "飛龍觀登山纜車", note: "纜車約 20 分一班；單人吊椅隨到隨搭", map: "Amanohashidate+View+Land", img: "day3-viewland-lift.jpg" },
-                    { time: "11:00", type: "SPOT", icon: "📷", title: "飛龍觀回廊拍照", addr: "飛龍觀回廊展望台", note: "體驗「股のぞき」彎腰倒看天橋立", map: "Amanohashidate+View+Land", img: "day3-hiryukan-view.jpg" },
-                    { time: "12:00", type: "TRAIN", icon: "🚠", title: "搭吊椅下山", addr: "吊椅下山俯瞰全景", note: "", map: "Amanohashidate+View+Land", img: "day3-chairlift-down.jpg" },
-                    { time: "12:20", type: "FOOD", icon: "🥢", title: "中餐＋智恩寺商圈", addr: "智恩寺・天橋立海水浴場", note: "品嚐海鮮丼與智惠之餅", map: "Chionji+Temple+Amanohashidate", img: "day3-chionji-lunch.png" },
-                    { time: "13:30", type: "SPOT", icon: "🛥️", title: "伊根灣遊船", addr: "伊根舟屋群", note: "伊根灣遊船餵海鷗＋舟屋街道漫步", map: "Ine+Funaya", img: "day3-ine-boat.jpg" },
-                    { time: "15:30", type: "BUS", icon: "🚌", title: "集合前往大阪", addr: "啟程前往大阪市區", note: "車程約 3 小時，可在車上小憩", map: "", img: "day3-bus-amanohashidate.jpg" },
-                    { time: "18:30", type: "SPOT", icon: "📍", title: "抵達大阪下車", addr: "蟹道樂東店附近下車", note: "", map: "Kani+Doraku+Dotonbori+Higashi", img: "day3-osaka-arrival.jpg" },
-                    { time: "18:45", type: "HOTEL", icon: "🏨", title: "川HOUSE道頓堀", addr: "川HOUSE道頓堀 Check-in", note: "密碼自助入住｜10:00 前 Check-out", map: "Dotonbori+Osaka", img: "day3-dotonbori-hotel.jpg" },
-                    { time: "19:00", type: "FOOD", icon: "🛍️", title: "心齋橋・道頓堀逛街", addr: "道頓堀商圈", note: "吃章魚燒, 拉麵，與固力果跑者拍照", map: "Shinsaibashi+Dotonbori", img: "day3-dotonbori-shopping.jpg" },
-                    { time: "20:30", type: "HOTEL", icon: "😴", title: "回飯店休息", addr: "返回川HOUSE道頓堀", note: "", map: "Dotonbori+Osaka", img: "day3-hotel-rest.jpg" }
-                ]
+            {
+                "time": "下午",
+                "type": "SPOT",
+                "icon": "🚶",
+                "title": "東京市區 Chill",
+                "addr": "市區自由散步",
+                "note": "行程先留白，依抵達體力與天氣彈性安排。",
+                "map": "",
+                "img": "bg23.png"
             },
-            4: {
-                day: 4, date: "2026-09-29", loc: "大阪 · 周遊卡一日遊", en: "Osaka - Amazing Pass Day Trip",
-                quote: "大阪の名所をめぐり、港の夕景と街の夜を楽しむ一日。",
-                img: "day4-main.jpg",
-                nodes: [
-                    { time: "07:30", type: "SPOT", icon: "☀️", title: "起床盥洗", addr: "準備出發", note: "", map: "", img: "day3-hotel-rest.jpg" },
-                    { time: "08:00", type: "FOOD", icon: "🍙", title: "出門吃早餐", addr: "周邊早餐時間", note: "", map: "", img: "day4-breakfast.jpg" },
-                    { time: "08:30", type: "TRAIN", icon: "🚉", title: "搭地鐵前往大阪城", addr: "谷町九丁目站搭紫色谷町線", 
-                      routeCapsules: [
-                          { code: "T25", lineName: "谷町九丁目", lineClass: "line-tanimachi" },
-                          { code: "T23", lineName: "谷町四丁目", lineClass: "line-tanimachi" }
-                      ],
-                      note: "T25 ➔ T23 谷町四丁目", map: "Tanimachi+9-chome+Station", img: "day1-kyoto-subway.png" },
-                    { time: "09:00", type: "SPOT", icon: "🏯", title: "大阪城天守閣", addr: "大阪城公園", note: "御座船人少先搭，人多先進天守閣", map: "Osaka+Castle", img: "day4-osaka-castle.jpg" },
-                    { time: "11:30", type: "TRAIN", icon: "🚉", title: "前往森之宮站搭車", addr: "搭乘中央線（綠色）直達大阪港", 
-                      routeCapsules: [
-                          { code: "C19", lineName: "森之宮", lineClass: "line-chuo" },
-                          { code: "C11", lineName: "大阪港", lineClass: "line-chuo" }
-                      ],
-                      note: "C19 ➔ C11 大阪港站直達", map: "Morinomiya+Station", img: "day4-morinomiya-station.jpg\" style=\"object-position: 20% center;" },
-                    { time: "12:00", type: "SPOT", icon: "🚢", title: "抵達大阪港站", addr: "大阪港周邊", note: "先去買 16:00 聖瑪麗亞號船票（夕陽最美）", map: "Osakako+Station", img: "day4-osakako-station.jpg" },
-                    { time: "12:20", type: "FOOD", icon: "🥢", title: "天保山港灣村午餐", addr: "天保山 Marketplace", note: "", map: "Osaka+Port", img: "day4-tempozan-lunch.jpg\" style=\"transform: scale(0.95); object-position: 30% 70%;" },
-                    { time: "13:00", type: "SPOT", icon: "🐠", title: "大阪海遊館", addr: "海遊館 Kaiyukan", note: "門票：¥2,700（看巨大鯨鯊）", map: "Osaka+Aquarium+Kaiyukan", img: "day4-kaiyukan.jpg" },
-                    { time: "15:00", type: "SPOT", icon: "🎡", title: "天保山大摩天輪", addr: "天保山大摩天輪", note: "俯瞰大阪灣海景", map: "Tempozan+Ferris+Wheel", img: "day4-tempozan-ferris-wheel.jpg" },
-                    { time: "16:00", type: "SPOT", icon: "⛵", title: "聖瑪麗亞號遊船", addr: "聖瑪麗亞號 乘船處", note: "傍晚 45 分鐘港灣夕陽巡航", map: "Santa+Maria+Osaka+Bay", img: "day4-santa-maria-cruise.jpg" },
-                    { time: "17:50", type: "TRAIN", icon: "🚉", title: "大阪港站搭車", addr: "搭乘中央線至本町站", 
-                      routeCapsules: [
-                          { code: "C11", lineName: "大阪港", lineClass: "line-chuo" },
-                          { code: "C16", lineName: "本町", lineClass: "line-chuo" }
-                      ],
-                      note: "C11 ➔ C16 本町站", map: "Osakako+Station", img: "day4-osakako-station.jpg" },
-                    { time: "18:10", type: "TRAIN", icon: "🚉", title: "本町站轉乘", addr: "轉乘御堂筋線（紅色）", 
-                      routeCapsules: [
-                          { code: "M18", lineName: "本町", lineClass: "line-midousuji" },
-                          { code: "M19", lineName: "心齋橋", lineClass: "line-midousuji" }
-                      ],
-                      note: "坐 1 站直達心齋橋（或步行 10 分）", map: "Hommachi+Station", img: "day1-kyoto-subway.png" },
-                    { time: "18:40", type: "FOOD", icon: "🛍️", title: "心齋橋逛街＋晚餐", addr: "心齋橋筋商店街", note: "大丸百貨、藥妝最後衝刺", map: "Shinsaibashi", img: "day4-shinsaibashi-dinner.jpg" },
-                    { time: "20:15", type: "HOTEL", icon: "😴", title: "回飯店整理行李", addr: "川HOUSE道頓堀", note: "整理行囊準備明天返台", map: "Dotonbori+Osaka", img: "day3-dotonbori-hotel.jpg" }
-                ]
-            },
-            5: {
-                day: 5, date: "2026-09-30", loc: "大阪 · 關西機場・返台", en: "Osaka - Kansai Airport - Taiwan",
-                quote: "旅の余韻を胸に、最後の景色を楽しみながら帰路へ。",
-                img: "day5-main.webp",
-                nodes: [
-                    { time: "08:30", type: "HOTEL", icon: "🍙", title: "退房・早餐・附近逛逛", addr: "辦理退房", note: "10:00 前完成退房", map: "Dotonbori+Osaka", img: "day3-hotel-rest.jpg" },
-                    { time: "10:30", type: "TRAIN", icon: "✈️", title: "前往關西機場", addr: "由難波搭乘南海電鐵或 JR 關空快速", note: "約 45~50 分抵達機場", map: "Kansai+International+Airport", img: "day5-kansai-airport-transfer.jpeg\" style=\"object-position: 70% center;" },
-                    { time: "11:30", type: "SPOT", icon: "🏢", title: "抵達關西機場", addr: "第一航廈 CI153 報到託運", note: "出境後免稅店採買伴手禮", map: "Kansai+International+Airport", img: "day5-kansai-airport.webp" },
-                    { time: "14:00", type: "FLIGHT", icon: "🛫", title: "關西機場起飛", addr: "CI153 中華航空 A321NEO", note: "選位：51A、51B、51C、52C", map: "Kansai+International+Airport", img: "day1-flight-landing.png" },
-                    { time: "16:00", type: "SPOT", icon: "🛬", title: "抵達桃園機場", addr: "第二航廈入境", note: "領取行李通關", map: "Taoyuan+International+Airport", img: "day1-flight-takeoff.jpg" },
-                    { time: "17:30", type: "SPOT", icon: "🏠", title: "返回溫暖的家", addr: "旅程圓滿結束", note: "好好休息！", map: "", img: "day5-home.png" }
-                ]
+            {
+                "time": "晚上",
+                "type": "SPOT",
+                "icon": "🌙",
+                "title": "回蒲田附近休息",
+                "addr": "Poka Stay Kamata 暖居浦田",
+                "note": "不安排固定晚餐。",
+                "map": "Poka Stay Kamata, Kamata, Tokyo",
+                "img": "bg3.png"
             }
-        };
+        ]
+    },
+    "2": {
+        "day": 2,
+        "date": "2026-10-04",
+        "loc": "富士山 · 一日遊",
+        "en": "Mt. Fuji - Full Day",
+        "quote": "山と湖の景色を楽しみ、東京へ戻って静かな夜を過ごす一日。",
+        "img": "bg2.jpg",
+        "nodes": [
+            {
+                "time": "早上",
+                "type": "SPOT",
+                "icon": "🗻",
+                "title": "富士山一日遊出發",
+                "addr": "東京出發前往富士山地區",
+                "note": "整天以富士山行程為主。",
+                "map": "Mount Fuji",
+                "img": "bg2.jpg"
+            },
+            {
+                "time": "白天",
+                "type": "SPOT",
+                "icon": "📷",
+                "title": "富士山景點巡遊",
+                "addr": "富士山／河口湖周邊",
+                "note": "依實際一日遊路線彈性移動。",
+                "map": "Lake Kawaguchi",
+                "img": "bg.png"
+            },
+            {
+                "time": "傍晚",
+                "type": "TRAIN",
+                "icon": "🚃",
+                "title": "返回東京",
+                "addr": "富士山地區 → 東京",
+                "note": "回程時間依當日團體行程調整。",
+                "map": "",
+                "img": "bg23.png"
+            },
+            {
+                "time": "晚上",
+                "type": "SPOT",
+                "icon": "🌙",
+                "title": "東京 Chill",
+                "addr": "回住宿後自由休息",
+                "note": "不安排固定晚餐。",
+                "map": "Poka Stay Kamata, Kamata, Tokyo",
+                "img": "bg3.png"
+            }
+        ]
+    },
+    "3": {
+        "day": 3,
+        "date": "2026-10-05",
+        "loc": "淺草 · 秋葉原 · 晴空塔",
+        "en": "Asakusa - Akihabara - Tokyo Skytree",
+        "quote": "浅草から秋葉原へ、夜は東京スカイツリーの景色を楽しむ一日。",
+        "img": "bg23.png",
+        "nodes": [
+            {
+                "time": "早上",
+                "type": "SPOT",
+                "icon": "⛩️",
+                "title": "淺草",
+                "addr": "淺草寺・雷門周邊",
+                "note": "白天散步與拍照。",
+                "map": "Senso-ji, Asakusa, Tokyo",
+                "img": "bg23.png"
+            },
+            {
+                "time": "下午",
+                "type": "SPOT",
+                "icon": "🎮",
+                "title": "秋葉原",
+                "addr": "秋葉原電器街・動漫街區",
+                "note": "自由逛街，不安排固定用餐。",
+                "map": "Akihabara, Tokyo",
+                "img": "bg.png"
+            },
+            {
+                "time": "20:00",
+                "type": "SPOT",
+                "icon": "🌃",
+                "title": "東京晴空塔觀景台",
+                "addr": "Tokyo Skytree",
+                "note": "✅ 已預約 20:00 觀景台門票",
+                "map": "Tokyo Skytree",
+                "img": "bg2.jpg"
+            },
+            {
+                "time": "—",
+                "type": "FOOD",
+                "icon": "🍽️",
+                "title": "LOUNGE",
+                "addr": "已預約的 LOUNGE 餐廳",
+                "note": "✅ 已預約；實際用餐時間依訂位資訊為準。",
+                "map": "",
+                "img": "bg3.png"
+            }
+        ]
+    },
+    "4": {
+        "day": 4,
+        "date": "2026-10-06",
+        "loc": "東京迪士尼 · 一整天",
+        "en": "Tokyo Disney Resort - Full Day",
+        "quote": "一日たっぷり遊んで、夜までディズニーの世界を楽しむ。",
+        "img": "bg3.png",
+        "nodes": [
+            {
+                "time": "早上",
+                "type": "SPOT",
+                "icon": "🏰",
+                "title": "東京迪士尼出發",
+                "addr": "東京迪士尼 Resort",
+                "note": "一整天以園區活動為主。",
+                "map": "Tokyo Disney Resort",
+                "img": "bg3.png"
+            },
+            {
+                "time": "白天",
+                "type": "SPOT",
+                "icon": "🎢",
+                "title": "東京迪士尼樂園",
+                "addr": "Tokyo Disney Resort",
+                "note": "全天遊玩，行程不另外塞景點。",
+                "map": "Tokyo Disneyland",
+                "img": "bg2.jpg"
+            },
+            {
+                "time": "晚上",
+                "type": "SPOT",
+                "icon": "✨",
+                "title": "迪士尼夜間活動",
+                "addr": "東京迪士尼 Resort",
+                "note": "依當日園區安排彈性調整。",
+                "map": "Tokyo Disneyland",
+                "img": "bg.png"
+            }
+        ]
+    },
+    "5": {
+        "day": 5,
+        "date": "2026-10-07",
+        "loc": "新宿 · 澀谷 · 東京鐵塔",
+        "en": "Shinjuku - Shibuya - Tokyo Tower",
+        "quote": "新宿と渋谷を歩き、夜は東京タワーから東京の街を眺める一日。",
+        "img": "bg2.png",
+        "nodes": [
+            {
+                "time": "早上",
+                "type": "SPOT",
+                "icon": "🏙️",
+                "title": "新宿",
+                "addr": "新宿站周邊・都心街區",
+                "note": "自由散步與逛街。",
+                "map": "Shinjuku, Tokyo",
+                "img": "bg2.png"
+            },
+            {
+                "time": "下午",
+                "type": "SPOT",
+                "icon": "📸",
+                "title": "澀谷",
+                "addr": "澀谷站・十字路口周邊",
+                "note": "自由逛街，不安排固定餐廳。",
+                "map": "Shibuya, Tokyo",
+                "img": "bg.png"
+            },
+            {
+                "time": "20:00",
+                "type": "SPOT",
+                "icon": "🗼",
+                "title": "東京鐵塔",
+                "addr": "Tokyo Tower",
+                "note": "✅ 20:00 入場／觀景安排",
+                "map": "Tokyo Tower",
+                "img": "bg23.png"
+            }
+        ]
+    },
+    "6": {
+        "day": 6,
+        "date": "2026-10-08",
+        "loc": "東京 · 回國",
+        "en": "Tokyo - Departure",
+        "quote": "旅の思い出を胸に、東京を後にして帰国。",
+        "img": "bg.png",
+        "nodes": [
+            {
+                "time": "早上",
+                "type": "HOTEL",
+                "icon": "🧳",
+                "title": "整理行李・Check-out",
+                "addr": "Poka Stay Kamata 暖居浦田",
+                "note": "中午班機，預留前往機場與報到安檢時間。",
+                "map": "Poka Stay Kamata, Kamata, Tokyo",
+                "img": "bg2.png"
+            },
+            {
+                "time": "中午",
+                "type": "FLIGHT",
+                "icon": "✈️",
+                "title": "東京機場起飛・回國",
+                "addr": "東京 → 台灣",
+                "note": "班機時間以你的機票資訊為準。",
+                "map": "",
+                "img": "bg23.png"
+            },
+            {
+                "time": "旅程結束",
+                "type": "SPOT",
+                "icon": "🏠",
+                "title": "平安回國",
+                "addr": "台灣",
+                "note": "東京 6 天 5 夜旅程結束。",
+                "map": "",
+                "img": "bg3.png"
+            }
+        ]
+    }
+};
 
         let currentDay = 1;
 
@@ -5287,7 +5292,7 @@ body #page-day-detail .v6-day-selector::before {
             const firstCard = carousel.firstElementChild;
             if (!firstCard) return;
             const cardWidth = firstCard.offsetWidth + 16;
-            const activeIndex = Math.min(Math.round(scrollLeft / cardWidth), 4);
+            const activeIndex = Math.min(Math.round(scrollLeft / cardWidth), 5);
             dots.forEach((dot, idx) => {
                 dot.classList.toggle('active', idx === activeIndex);
             });
@@ -5327,6 +5332,12 @@ body #page-day-detail .v6-day-selector::before {
             const dayHeaderArt = dayHeaderArtMap[dayNum] || dayHeaderArtMap[1];
             const bottomLeafSrc = dayBottomLeafMap[dayNum] || 'mapleleaf03.png';
             const activeFlower = '<img src="stamp03.png" class="active-tab-flower" alt="" onerror="this.style.display=\'none\'">';
+            const daySelectorHtml = Object.values(fullItinerary).map(item => {
+                const d = new Date(item.date + 'T12:00:00');
+                const weekday = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getDay()];
+                const mmdd = item.date.slice(5).replace('-', '/');
+                return '<button type="button" class="v6-day-chip ' + (item.day === dayNum ? 'active' : '') + '" onclick="renderDay(' + item.day + ')"><span>Day ' + item.day + '</span><small>' + mmdd + ' (' + weekday + ')</small></button>';
+            }).join('');
 
             // 更新背景固定落葉
             const bgLeafEl = document.getElementById('fixedBgLeaf');
@@ -5336,7 +5347,7 @@ body #page-day-detail .v6-day-selector::before {
             }
 
             // 更新 Top Tabs 狀態（只切換 active，不改掉上方 icon 結構）
-            for(let i=1; i<=5; i++) {
+            for(let i=1; i<=6; i++) {
                 const tabEl = document.getElementById(`tab-d${i}`);
                 if (tabEl) {
                     tabEl.classList.toggle('active', i === dayNum);
@@ -5348,7 +5359,7 @@ body #page-day-detail .v6-day-selector::before {
             const btnPrev = document.getElementById('btnPrevDay');
             const btnNext = document.getElementById('btnNextDay');
             if (btnPrev) btnPrev.style.visibility = dayNum === 1 ? 'hidden' : 'visible';
-            if (btnNext) btnNext.style.visibility = dayNum === 5 ? 'hidden' : 'visible';
+            if (btnNext) btnNext.style.visibility = dayNum === 6 ? 'hidden' : 'visible';
 
             // 判斷當前進行中站點 (NOW)
             const now = getCurrentDateObj();
@@ -5493,21 +5504,7 @@ body #page-day-detail .v6-day-selector::before {
                 <img src="${data.img}" class="hero-banner-img ${data.day === 2 ? 'day2-hero-img' : data.day === 5 ? 'day5-hero-img' : ''}" alt="Hero">
 
                 <nav class="v6-day-selector" aria-label="Day navigation">
-                    <button type="button" class="v6-day-chip ${dayNum === 1 ? 'active' : ''}" onclick="renderDay(1)">
-                        <span>Day 1</span><small>Sep 26 (Sat)</small>
-                    </button>
-                    <button type="button" class="v6-day-chip ${dayNum === 2 ? 'active' : ''}" onclick="renderDay(2)">
-                        <span>Day 2</span><small>Sep 27 (Sun)</small>
-                    </button>
-                    <button type="button" class="v6-day-chip ${dayNum === 3 ? 'active' : ''}" onclick="renderDay(3)">
-                        <span>Day 3</span><small>Sep 28 (Mon)</small>
-                    </button>
-                    <button type="button" class="v6-day-chip ${dayNum === 4 ? 'active' : ''}" onclick="renderDay(4)">
-                        <span>Day 4</span><small>Sep 29 (Tue)</small>
-                    </button>
-                    <button type="button" class="v6-day-chip ${dayNum === 5 ? 'active' : ''}" onclick="renderDay(5)">
-                        <span>Day 5</span><small>Sep 30 (Wed)</small>
-                    </button>
+                    ${daySelectorHtml}
                 </nav>
 
                 <div class="section-title-divider">
@@ -5677,7 +5674,7 @@ body #page-day-detail .v6-day-selector::before {
 
         function changeDay(delta) {
             let target = currentDay + delta;
-            if (target >= 1 && target <= 5) {
+            if (target >= 1 && target <= 6) {
                 renderDay(target);
             }
         }
@@ -5754,7 +5751,7 @@ body #page-day-detail .v6-day-selector::before {
                     if (p.id === 'page-day-detail') {
                         const scrollContainer = document.getElementById('scrollContent');
                         const day = Number(currentDay);
-                        const validDay = Number.isInteger(day) && day >= 1 && day <= 5 && !!fullItinerary[day];
+                        const validDay = Number.isInteger(day) && day >= 1 && day <= 6 && !!fullItinerary[day];
 
                         if (!validDay) {
                             p.style.display = 'none';
