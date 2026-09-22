@@ -5662,7 +5662,7 @@ body #page-day-detail .v6-day-selector::before {
 
         function renderAndOpenDay(dayNum) {
             const day = Number(dayNum);
-            if (!Number.isInteger(day) || day < 1 || day > 5 || !fullItinerary[day]) return;
+            if (!Number.isInteger(day) || day < 1 || day > 6 || !fullItinerary[day]) return;
 
             renderDay(day);
 
@@ -5715,7 +5715,7 @@ body #page-day-detail .v6-day-selector::before {
                 const day = Number(currentDay);
                 const scrollContainer = document.getElementById('scrollContent');
 
-                if (!Number.isInteger(day) || day < 1 || day > 5 || !fullItinerary[day]) return;
+                if (!Number.isInteger(day) || day < 1 || day > 6 || !fullItinerary[day]) return;
 
                 if (!scrollContainer || !scrollContainer.innerHTML.trim()) {
                     renderDay(day);
