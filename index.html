@@ -4684,6 +4684,20 @@ body #page-day-detail .footer-nav-center.v6-three-action-dock {
 }
 </style>
 
+<style id="macau-utility-polish">
+/* Macau utility icon finish */
+.mop-icon { width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:15px;color:#fff9eb;background:linear-gradient(145deg,#1b5268,#12394b);font:800 13px "Cinzel",serif;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35); }
+.quick-tool-icon-box .mop-icon { width:100%;height:100%;border-radius:14px; }
+.quick-tool-icon-box .bus-icon { width:100%;height:100%;border-radius:14px;display:flex;align-items:center;justify-content:center;background:#e1eceb;font-size:29px; }
+#page-train .traffic-circle { display:flex !important;align-items:center;justify-content:center;background:linear-gradient(145deg,#1b5268,#12394b)!important;border-color:rgba(255,255,255,.7)!important;box-shadow:0 7px 16px rgba(14,57,76,.16)!important; }
+.transport-mark { color:#fff8e9;font:800 14px "Cinzel",serif;letter-spacing:.05em; }
+.transport-bus-mark { font-size:28px;line-height:1; }
+.today-chip-mark { display:inline-flex;align-items:center;justify-content:center;padding:6px 11px;border-radius:999px;background:#17495e;color:#fffaf0;border:1px solid #dfcba6;font:700 8px "Cinzel",serif;letter-spacing:.18em;box-shadow:0 4px 10px rgba(14,57,76,.16); }
+#view-directory .today-badge-flag { width:auto !important;height:auto !important;background:transparent!important;box-shadow:none!important; }
+#page-air .utility-popup-shell, #page-train .utility-popup-shell, #page-suitcase .utility-popup-shell, #page-rate .utility-popup-shell {
+  background:#f8f3e9 !important;background-image:none !important;
+}
+</style>
 </head>
 <body>
 
@@ -4791,11 +4805,11 @@ body #page-day-detail .footer-nav-center.v6-three-action-dock {
                                 <div class="traffic-intro"><p>查詢澳門公車資訊、站點位置與市區交通。</p></div>
                                 <div class="traffic-circle-row">
                                     <a class="traffic-circle-link yahoo-link" href="https://www.dsat.gov.mo/" target="_blank" rel="noopener">
-                                        <div class="traffic-circle yahoo-circle"><img src="yahoo.png" alt="澳門交通事務局"></div>
+                                        <div class="traffic-circle yahoo-circle"><span class="transport-mark">DSAT</span></div>
                                         <div><div class="traffic-source-title">澳門交通事務局 DSAT</div><div class="traffic-source-sub">官方交通與公車資訊</div></div>
                                     </a>
                                     <a class="traffic-circle-link navitime-link" href="https://www.google.com/maps/search/?api=1&query=Macau+Bus+Stops" target="_blank" rel="noopener">
-                                        <div class="traffic-circle navitime-circle"><img src="navitime1.png" alt="澳門公車站點"></div>
+                                        <div class="traffic-circle navitime-circle"><span class="transport-bus-mark">🚌</span></div>
                                         <div><div class="traffic-source-title">澳門公車站點</div><div class="traffic-source-sub">Google Maps 站點搜尋</div></div>
                                     </a>
                                 </div>
@@ -5052,9 +5066,9 @@ body #page-day-detail .footer-nav-center.v6-three-action-dock {
                     <div class="quick-drawer-grid">
                         <div class="quick-tool-item" onclick="openToolFromDrawer('page-rate')">
                             <div class="quick-tool-icon-box" style="background:#fff4e6;">
-                                <img src="Currency.png" onerror="this.outerHTML='<span style=\'font-size:22px; font-weight:bold; color:#a62c21;\'>¥</span>'">
+                                <span class="mop-icon">MOP</span>
                             </div>
-                            <span>日幣匯率</span>
+                            <span>澳門幣換算</span>
                         </div>
                         <div class="quick-tool-item" onclick="openToolFromDrawer('page-air')">
                             <div class="quick-tool-icon-box">
@@ -5070,7 +5084,7 @@ body #page-day-detail .footer-nav-center.v6-three-action-dock {
                         </div>
                         <div class="quick-tool-item" onclick="openToolFromDrawer('page-train')">
                             <div class="quick-tool-icon-box">
-                                <img src="Train.png" onerror="this.outerHTML='<span style=\'font-size:20px;\'>🚃</span>'">
+                                <span class="bus-icon">🚌</span>
                             </div>
                             <span>交通資訊</span>
                         </div>
@@ -5639,7 +5653,7 @@ body #page-day-detail .footer-nav-center.v6-three-action-dock {
                 // 如果是當天，插入兔子標籤
                 const todayBadgeHtml = isToday ? `
                     <div class="today-badge-flag">
-                        <img src="today.png" class="today-rabbit-img" alt="今日">
+                        <span class="today-chip-mark">TODAY</span>
                     </div>
                 ` : '';
 
@@ -5846,7 +5860,7 @@ body #page-day-detail .footer-nav-center.v6-three-action-dock {
                                 </div>` : ''}
                             </div>
                             <div class="card-thumb">
-                                <img src="${node.img}" alt="${node.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='🏯'">
+                                <img src="${node.img}" alt="${node.title}" onerror="this.style.display='none'; this.parentElement.innerHTML='📍'">
                             </div>
                         </div>
                     </div>
