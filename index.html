@@ -7,16 +7,16 @@
     <!-- 全螢幕 Web App 支援 -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="東京旅記">
+    <meta name="apple-mobile-web-app-title" content="澳門旅記">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="theme-color" content="#fbf7ee">
-    <meta name="application-name" content="東京旅記">
+    <meta name="application-name" content="澳門旅記">
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="icons/icon-512.png">
     <link rel="apple-touch-icon" href="tower.png">
 
-    <title>東京旅記</title>
+    <title>澳門旅記</title>
     <!-- 引入 Cinzel (英數標籤/時間), Noto Serif TC (和風宋體標題/內文) -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;600;700;900&family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
 
@@ -3781,7 +3781,7 @@
             margin: 0 -14px 18px !important;
             padding: 8px 12px 9px !important;
             display: grid !important;
-            grid-template-columns: repeat(6, minmax(0,1fr)) !important;
+            grid-template-columns: repeat(5, minmax(0,1fr)) !important;
             gap: 5px !important;
             background: rgba(247,241,231,.985) !important;
             border-bottom: 1px solid rgba(158,126,96,.10) !important;
@@ -4442,7 +4442,7 @@ body #page-day-detail .v6-day-selector {
     margin: 0 -14px 18px !important;
     padding: calc(env(safe-area-inset-top, 0px) + 20px) 12px 9px !important;
     display: grid !important;
-    grid-template-columns: repeat(6, minmax(0,1fr)) !important;
+    grid-template-columns: repeat(5, minmax(0,1fr)) !important;
     gap: 5px !important;
     background: linear-gradient(
         180deg,
@@ -4531,13 +4531,13 @@ body #page-day-detail .v6-day-selector::before {
                     <img src="tower.png" class="tower-icon" alt="Tower" onerror="this.style.opacity='0'">
                     <div class="main-title">東京</div>
                     <div class="sub-title-ch">旅記</div>
-                    <div class="collage-text">TOKYO / 6 DAYS</div>
+                    <div class="collage-text">MACAU / 5 DAYS</div>
                     <div class="gold-divider">
                         <div class="gold-line"></div>
                         <img src="maple.png" alt="maple" style="width: 18px; height: auto; opacity: 0.9;" onerror="this.style.display='none'">
                         <div class="gold-line"></div>
                     </div>
-                    <div class="jp-quote">東京の旅を始めましょう。</div>
+                    <div class="jp-quote">澳門的旅程，慢慢開始。</div>
                 </div>
 
                 <div class="stamp-container" id="stampArea">
@@ -4555,7 +4555,7 @@ body #page-day-detail .v6-day-selector::before {
         <section id="view-directory" class="view-section">
             <div class="directory-scale">
             <div class="dir-header">
-                <h2>東京六日旅記</h2>
+                <h2>澳門五日旅記</h2>
                 <span class="index-label">JOURNEY INDEX</span>
             </div>
             
@@ -4851,17 +4851,13 @@ body #page-day-detail .v6-day-selector::before {
 
                 <!-- 頂部滿版裝飾區：之後可直接把生成的背景圖掛在 .day-top-scene -->
                 <div class="day-top-scene">
-                    <nav class="top-tabs-nav top-washi-nav" aria-label="Day navigation">
-                        <button type="button" class="tab-item tab-home" onclick="goHomeFromDay()" aria-label="Home">
-                            <span class="top-chip-title">Home</span>
-                            <span class="top-chip-sub">首頁</span>
-                        </button>
-                        <button type="button" class="tab-item" id="tab-d1" onclick="renderDay(1)" aria-label="Day 1"><span class="top-chip-title">Day 1</span><span class="top-chip-sub">Oct 3</span></button>
-                        <button type="button" class="tab-item" id="tab-d2" onclick="renderDay(2)" aria-label="Day 2"><span class="top-chip-title">Day 2</span><span class="top-chip-sub">Oct 4</span></button>
-                        <button type="button" class="tab-item" id="tab-d3" onclick="renderDay(3)" aria-label="Day 3"><span class="top-chip-title">Day 3</span><span class="top-chip-sub">Oct 5</span></button>
-                        <button type="button" class="tab-item" id="tab-d4" onclick="renderDay(4)" aria-label="Day 4"><span class="top-chip-title">Day 4</span><span class="top-chip-sub">Oct 6</span></button>
-                        <button type="button" class="tab-item" id="tab-d5" onclick="renderDay(5)" aria-label="Day 5"><span class="top-chip-title">Day 5</span><span class="top-chip-sub">Oct 7</span></button>
-                        <button type="button" class="tab-item" id="tab-d6" onclick="renderDay(6)" aria-label="Day 6"><span class="top-chip-title">Day 6</span><span class="top-chip-sub">Oct 8</span></button>
+                                        <nav class="top-tabs-nav top-washi-nav" aria-label="Day navigation">
+                        <button type="button" class="tab-item tab-home" onclick="goHomeFromDay()" aria-label="Home"><span class="top-chip-title">Home</span><span class="top-chip-sub">首頁</span></button>
+                        <button type="button" class="tab-item" id="tab-d1" onclick="renderDay(1)" aria-label="Day 1"><span class="top-chip-title">Day 1</span><span class="top-chip-sub">Nov 13</span></button>
+                        <button type="button" class="tab-item" id="tab-d2" onclick="renderDay(2)" aria-label="Day 2"><span class="top-chip-title">Day 2</span><span class="top-chip-sub">Nov 14</span></button>
+                        <button type="button" class="tab-item" id="tab-d3" onclick="renderDay(3)" aria-label="Day 3"><span class="top-chip-title">Day 3</span><span class="top-chip-sub">Nov 15</span></button>
+                        <button type="button" class="tab-item" id="tab-d4" onclick="renderDay(4)" aria-label="Day 4"><span class="top-chip-title">Day 4</span><span class="top-chip-sub">Nov 16</span></button>
+                        <button type="button" class="tab-item" id="tab-d5" onclick="renderDay(5)" aria-label="Day 5"><span class="top-chip-title">Day 5</span><span class="top-chip-sub">Nov 17</span></button>
                     </nav>
                 </div>
 
@@ -4992,12 +4988,11 @@ body #page-day-detail .v6-day-selector::before {
         }
 
         const TRIP_DATES = {
-            "2026-10-03": 1,
-            "2026-10-04": 2,
-            "2026-10-05": 3,
-            "2026-10-06": 4,
-            "2026-10-07": 5,
-            "2026-10-08": 6
+            "2026-11-13": 1,
+            "2026-11-14": 2,
+            "2026-11-15": 3,
+            "2026-11-16": 4,
+            "2026-11-17": 5
         };
 
         // 乘車資訊：Day 1~5 共用資料（包車/飛機不做路線彈窗）
@@ -5006,291 +5001,421 @@ body #page-day-detail .v6-day-selector::before {
         const fullItinerary = {
     "1": {
         "day": 1,
-        "date": "2026-10-03",
-        "loc": "東京 · 抵達日",
-        "en": "Tokyo - Arrival & Chill",
-        "quote": "東京の街にゆっくり馴染みながら、旅の始まりを楽しむ。",
+        "date": "2026-11-13",
+        "loc": "澳門半島 · 老城美食散步",
+        "en": "Macau Peninsula - Historic Centre & Food",
+        "quote": "用咖哩、粥麵與葡式小吃，慢慢開啟澳門旅程。",
         "img": "bg.png",
         "nodes": [
             {
-                "time": "抵達",
-                "type": "FLIGHT",
-                "icon": "🛬",
-                "title": "抵達東京",
-                "addr": "東京機場 → 前往市區",
-                "note": "實際時間依班機與入境狀況調整，先不排固定餐廳。",
-                "map": "",
+                "time": "抵達後",
+                "type": "HOTEL",
+                "icon": "🧳",
+                "title": "澳門十六浦索菲特酒店",
+                "addr": "寄放行李",
+                "note": "先到飯店寄放行李，確認寄放與入住安排。",
+                "map": "Sofitel Macau At Ponte 16",
+                "img": "bg2.png"
+            },
+            {
+                "time": "早午餐",
+                "type": "FOOD",
+                "icon": "🍛",
+                "title": "牛記咖哩",
+                "addr": "咖哩小吃",
+                "note": "兩人可以分一份，留點胃給下一站。",
+                "map": "牛記咖哩 澳門",
+                "img": "bg3.png"
+            },
+            {
+                "time": "接著",
+                "type": "FOOD",
+                "icon": "🍜",
+                "title": "六記粥麵",
+                "addr": "水蟹粥・蝦子撈麵・乾炒牛河",
+                "note": "想吃的品項：水蟹粥、蝦子撈麵、乾炒牛河；依食量分享。",
+                "map": "六記粥麵 澳門",
                 "img": "bg.png"
             },
             {
-                "time": "入住後",
-                "type": "HOTEL",
-                "icon": "🏨",
-                "title": "Poka Stay Kamata 暖居浦田",
-                "addr": "Check-in／放置行李",
-                "note": "住宿固定於此；下午與晚上以 Chill 行程為主。",
-                "map": "Poka Stay Kamata, Kamata, Tokyo",
+                "time": "散步途中",
+                "type": "FOOD",
+                "icon": "🍋",
+                "title": "永吉檸檬",
+                "addr": "前往大三巴路上",
+                "note": "順路買檸檬飲品。",
+                "map": "永吉檸檬 澳門",
                 "img": "bg2.png"
             },
             {
                 "time": "下午",
                 "type": "SPOT",
-                "icon": "🚶",
-                "title": "東京市區 Chill",
-                "addr": "市區自由散步",
-                "note": "行程先留白，依抵達體力與天氣彈性安排。",
-                "map": "",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Shibuya_Scramble_crossing.jpg"
+                "icon": "🏛️",
+                "title": "大三巴牌坊",
+                "addr": "Ruins of St. Paul's",
+                "note": "可順路看看旁邊的哪吒廟與大坑遺址。",
+                "map": "Ruins of St. Paul's Macau",
+                "img": "bg23.png"
+            },
+            {
+                "time": "下午",
+                "type": "SPOT",
+                "icon": "🏺",
+                "title": "澳門博物館",
+                "addr": "大炮台",
+                "note": "了解澳門歷史與文化，出發前確認開放時間。",
+                "map": "Macao Museum",
+                "img": "bg.png"
+            },
+            {
+                "time": "途中採買",
+                "type": "SHOP",
+                "icon": "🥮",
+                "title": "澳門咀香園餅家",
+                "addr": "手信／餅家",
+                "note": "有需要可以買伴手禮。",
+                "map": "咀香園餅家 澳門",
+                "img": "bg3.png"
+            },
+            {
+                "time": "接著搭車",
+                "type": "FOOD",
+                "icon": "🧇",
+                "title": "澤賢記",
+                "addr": "葡式蛋撻口味雞蛋仔",
+                "note": "兩人一份即可，先確認分店位置。",
+                "map": "澤賢記 澳門",
+                "img": "bg2.png"
+            },
+            {
+                "time": "下午茶",
+                "type": "FOOD",
+                "icon": "🥧",
+                "title": "瑪嘉烈蛋撻店",
+                "addr": "Margaret's Café e Nata",
+                "note": "安排一份蛋撻當點心。",
+                "map": "瑪嘉烈蛋撻店 澳門",
+                "img": "bg.png"
+            },
+            {
+                "time": "傍晚",
+                "type": "FOOD",
+                "icon": "🍢",
+                "title": "明記牛雜",
+                "addr": "澳門小吃",
+                "note": "依當天胃口決定是否加吃。",
+                "map": "明記牛雜 澳門",
+                "img": "bg3.png"
             },
             {
                 "time": "晚上",
-                "type": "SPOT",
-                "icon": "🌙",
-                "title": "回蒲田附近休息",
-                "addr": "Poka Stay Kamata 暖居浦田",
-                "note": "不安排固定晚餐。",
-                "map": "Poka Stay Kamata, Kamata, Tokyo",
-                "img": "bg3.png"
+                "type": "HOTEL",
+                "icon": "🛁",
+                "title": "回飯店休息、泡澡",
+                "addr": "澳門十六浦索菲特酒店",
+                "note": "第一天以老城區步行與小吃為主，晚上回飯店放鬆。",
+                "map": "Sofitel Macau At Ponte 16",
+                "img": "bg2.png"
             }
         ]
     },
     "2": {
         "day": 2,
-        "date": "2026-10-04",
-        "loc": "富士山 · 一日遊",
-        "en": "Mt. Fuji - Full Day",
-        "quote": "山と湖の景色を楽しみ、東京へ戻って静かな夜を過ごす一日。",
-        "img": "bg2.jpg",
+        "date": "2026-11-14",
+        "loc": "新馬路 · 大賽車 · 漁人碼頭",
+        "en": "Macau City - Grand Prix & Waterfront",
+        "quote": "睡飽再出發，從老澳門早餐一路走到海邊。",
+        "img": "bg2.png",
         "nodes": [
             {
-                "time": "早上",
-                "type": "SPOT",
-                "icon": "🗻",
-                "title": "富士山一日遊出發",
-                "addr": "東京出發前往富士山地區",
-                "note": "整天以富士山行程為主。",
-                "map": "Mount Fuji",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Mount_Fuji_from_Lake_Kawaguchi.jpg"
+                "time": "09:00–10:00 出門",
+                "type": "FOOD",
+                "icon": "🥪",
+                "title": "南屏雅敘",
+                "addr": "厚蛋叉燒三明治・沙翁",
+                "note": "睡到飽後再出門，早餐吃招牌三明治與沙翁。",
+                "map": "南屏雅敘 澳門",
+                "img": "bg.png"
             },
             {
-                "time": "白天",
-                "type": "SPOT",
-                "icon": "📷",
-                "title": "富士山景點巡遊",
-                "addr": "富士山／河口湖周邊",
-                "note": "依實際一日遊路線彈性移動。",
-                "map": "Lake Kawaguchi",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Mount_Fuji_from_Lake_Kawaguchi.jpg"
+                "time": "早餐後",
+                "type": "FOOD",
+                "icon": "🥥",
+                "title": "洪馨記椰子雪糕",
+                "addr": "椰子雪糕",
+                "note": "當作散步中的甜點。",
+                "map": "洪馨記 澳門",
+                "img": "bg3.png"
             },
             {
-                "time": "傍晚",
-                "type": "TRAIN",
-                "icon": "🚃",
-                "title": "返回東京",
-                "addr": "富士山地區 → 東京",
-                "note": "回程時間依當日團體行程調整。",
-                "map": "",
+                "time": "接著",
+                "type": "FOOD",
+                "icon": "🥢",
+                "title": "倫記軟滑腸粉",
+                "addr": "腸粉",
+                "note": "依食量決定是否加點。",
+                "map": "倫記軟滑腸粉 澳門",
+                "img": "bg2.png"
+            },
+            {
+                "time": "搭車前往",
+                "type": "SPOT",
+                "icon": "🌳",
+                "title": "塔石廣場",
+                "addr": "Tap Seac Square",
+                "note": "在廣場附近散步，再前往咖啡店與博物館區。",
+                "map": "Tap Seac Square Macau",
                 "img": "bg23.png"
             },
             {
-                "time": "晚上",
+                "time": "中午",
+                "type": "FOOD",
+                "icon": "☕",
+                "title": "Grandstand Café",
+                "addr": "咖啡／簡餐",
+                "note": "安排在大賽車博物館前後。",
+                "map": "Grandstand Café Macau",
+                "img": "bg.png"
+            },
+            {
+                "time": "下午",
                 "type": "SPOT",
-                "icon": "🌙",
-                "title": "東京 Chill",
-                "addr": "回住宿後自由休息",
-                "note": "不安排固定晚餐。",
-                "map": "Poka Stay Kamata, Kamata, Tokyo",
+                "icon": "🏎️",
+                "title": "澳門大賽車博物館",
+                "addr": "Macao Grand Prix Museum",
+                "note": "一般週二休館，出發前確認開放時間。",
+                "map": "Macao Grand Prix Museum",
+                "img": "bg2.png"
+            },
+            {
+                "time": "順路拍照",
+                "type": "SPOT",
+                "icon": "🌼",
+                "title": "金蓮花廣場",
+                "addr": "Lotus Square",
+                "note": "短暫停留拍照。",
+                "map": "Lotus Square Macau",
+                "img": "bg3.png"
+            },
+            {
+                "time": "下午至傍晚",
+                "type": "SPOT",
+                "icon": "⚓",
+                "title": "澳門漁人碼頭・會展中心",
+                "addr": "Fisherman's Wharf",
+                "note": "沿海邊散步、看建築與海景。",
+                "map": "Macau Fisherman's Wharf",
+                "img": "bg23.png"
+            },
+            {
+                "time": "晚餐",
+                "type": "FOOD",
+                "icon": "🍽️",
+                "title": "新海灣葡式美食",
+                "addr": "葡式料理",
+                "note": "晚餐安排在漁人碼頭附近行程之後。",
+                "map": "新海灣葡式美食 澳門",
+                "img": "bg.png"
+            },
+            {
+                "time": "飯後散步",
+                "type": "SPOT",
+                "icon": "❤️",
+                "title": "心形樹（澳門科學館附近）",
+                "addr": "澳門科學館海旁",
+                "note": "吃飽後走去拍照，若累了可略過。",
+                "map": "Macao Science Center",
+                "img": "bg2.png"
+            },
+            {
+                "time": "回程",
+                "type": "TRANSPORT",
+                "icon": "🚕",
+                "title": "搭車回飯店",
+                "addr": "澳門十六浦索菲特酒店",
+                "note": "交通估算：計程車約 MOP 90–120／20 分鐘；公車 MT4 約 MOP 6／45 分鐘，實際依起訖點與路況為準。",
+                "map": "Sofitel Macau At Ponte 16",
                 "img": "bg3.png"
             }
         ]
     },
     "3": {
         "day": 3,
-        "date": "2026-10-05",
-        "loc": "淺草 · 秋葉原 · 晴空塔",
-        "en": "Asakusa - Akihabara - Tokyo Skytree",
-        "quote": "浅草から秋葉原へ、夜は東京スカイツリーの景色を楽しむ一日。",
+        "date": "2026-11-15",
+        "loc": "退房 · 官也街 · 路環",
+        "en": "Taipa & Coloane - Snacks and Pandas",
+        "quote": "退房後把行李寄放好，再慢慢探索氹仔與路環。",
         "img": "bg23.png",
         "nodes": [
             {
                 "time": "早上",
+                "type": "HOTEL",
+                "icon": "🧳",
+                "title": "睡飽退房",
+                "addr": "澳門十六浦索菲特酒店",
+                "note": "退房前確認行李與隨身物品。",
+                "map": "Sofitel Macau At Ponte 16",
+                "img": "bg2.png"
+            },
+            {
+                "time": "早上",
+                "type": "TRANSPORT",
+                "icon": "🚌",
+                "title": "搭公車前往手信店",
+                "addr": "正牌車厘哥夫一帶",
+                "note": "依當日公車班次與交通狀況安排。",
+                "map": "車厘哥夫 澳門",
+                "img": "bg.png"
+            },
+            {
+                "time": "上午",
+                "type": "SHOP",
+                "icon": "🥜",
+                "title": "正牌車厘哥夫・鉅記餅家",
+                "addr": "杏仁餅／澳門手信",
+                "note": "前幾天若沒買到杏仁餅，可以在這裡補買。",
+                "map": "鉅記餅家 官也街 澳門",
+                "img": "bg3.png"
+            },
+            {
+                "time": "早午餐",
                 "type": "SPOT",
-                "icon": "⛩️",
-                "title": "淺草",
-                "addr": "淺草寺・雷門周邊",
-                "note": "白天散步與拍照。",
-                "map": "Senso-ji, Asakusa, Tokyo",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Sensoji.jpg"
+                "icon": "🏘️",
+                "title": "官也街",
+                "addr": "Rua do Cunha, Taipa",
+                "note": "在官也街附近找早午餐、邊走邊吃。",
+                "map": "官也街 澳門",
+                "img": "bg23.png"
+            },
+            {
+                "time": "中午",
+                "type": "HOTEL",
+                "icon": "🧳",
+                "title": "澳門巴黎人寄放行李",
+                "addr": "The Parisian Macao",
+                "note": "抵達後先確認行李寄放方式與可寄放時間。",
+                "map": "The Parisian Macao",
+                "img": "bg2.png"
             },
             {
                 "time": "下午",
                 "type": "SPOT",
-                "icon": "🎮",
-                "title": "秋葉原",
-                "addr": "秋葉原電器街・動漫街區",
-                "note": "自由逛街，不安排固定用餐。",
-                "map": "Akihabara, Tokyo",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/8/83/Akihabara_picture.jpg"
+                "icon": "🐼",
+                "title": "澳門大熊貓館",
+                "addr": "石排灣郊野公園",
+                "note": "留意開放時段與週一休館規則，出發前再確認。",
+                "map": "Macao Giant Panda Pavilion",
+                "img": "bg.png"
             },
             {
-                "time": "20:00–20:30",
+                "time": "下午至傍晚",
                 "type": "SPOT",
-                "icon": "🌃",
-                "title": "東京晴空塔觀景台",
-                "addr": "Tokyo Skytree",
-                "note": "✅ 已預約 20:00–20:30 觀景台門票",
-                "map": "Tokyo Skytree",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Tokyo_Skytree_night.jpg"
+                "icon": "⛩️",
+                "title": "媽祖文化村・媽祖聖像",
+                "addr": "路環疊石塘山",
+                "note": "需要爬山步行，穿好走的鞋並預留體力與天色時間。",
+                "map": "A-Ma Cultural Village Macau",
+                "img": "bg23.png"
             },
             {
-                "time": "18:00",
-                "type": "FOOD",
-                "icon": "🍽️",
-                "title": "LOUNGE",
-                "addr": "已預約的 LOUNGE 餐廳",
-                "note": "✅ 18:00 已預約",
-                "map": "",
+                "time": "晚上",
+                "type": "HOTEL",
+                "icon": "🌙",
+                "title": "回飯店休息",
+                "addr": "澳門巴黎人",
+                "note": "晚上不再排固定景點，視體力休息。",
+                "map": "The Parisian Macao",
                 "img": "bg3.png"
             }
         ]
     },
     "4": {
         "day": 4,
-        "date": "2026-10-06",
-        "loc": "東京迪士尼 · 一整天",
-        "en": "Tokyo Disney Resort - Full Day",
-        "quote": "一日たっぷり遊んで、夜までディズニーの世界を楽しむ。",
-        "img": "bg3.png",
+        "date": "2026-11-16",
+        "loc": "自由活動 · 威尼斯人",
+        "en": "Macau - Flexible Day & The Venetian",
+        "quote": "睡到自然醒，留一天按心情慢慢玩。",
+        "img": "bg.png",
         "nodes": [
             {
-                "time": "早上",
-                "type": "SPOT",
-                "icon": "🏰",
-                "title": "東京迪士尼出發",
-                "addr": "東京迪士尼 Resort",
-                "note": "一整天以園區活動為主。",
-                "map": "Tokyo Disney Resort",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/d/df/Tokyo_Disneylands_cinderella_castle.jpg"
+                "time": "睡到飽",
+                "type": "FOOD",
+                "icon": "🍽️",
+                "title": "自行找吃的",
+                "addr": "早餐／早午餐自由安排",
+                "note": "你有留意喜公館，可以當作候選；出發前確認店址與營業時間。",
+                "map": "喜公館 澳門",
+                "img": "bg3.png"
             },
             {
-                "time": "白天",
+                "time": "下午",
                 "type": "SPOT",
-                "icon": "🎢",
-                "title": "東京迪士尼樂園",
-                "addr": "Tokyo Disney Resort",
-                "note": "全天遊玩，行程不另外塞景點。",
-                "map": "Tokyo Disneyland",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/d/df/Tokyo_Disneylands_cinderella_castle.jpg"
+                "icon": "🎟️",
+                "title": "自由活動",
+                "addr": "依當天精神與天氣決定",
+                "note": "保留彈性，不預先塞滿行程。",
+                "map": "Macau",
+                "img": "bg2.png"
+            },
+            {
+                "time": "可選行程",
+                "type": "SPOT",
+                "icon": "🌿",
+                "title": "蝙蝠洞周邊散步",
+                "addr": "自然景點／步行路線",
+                "note": "若想再走走，可先確認路線、天氣與現場安全指示；不想走就直接回飯店休息。",
+                "map": "蝙蝠洞 澳門",
+                "img": "bg23.png"
+            },
+            {
+                "time": "下午至晚上",
+                "type": "SPOT",
+                "icon": "🛶",
+                "title": "澳門威尼斯人・貢多拉船",
+                "addr": "The Venetian Macao",
+                "note": "搭乘室內貢多拉船，再到百貨商場逛逛。",
+                "map": "The Venetian Macao",
+                "img": "bg2.png"
             },
             {
                 "time": "晚上",
-                "type": "SPOT",
-                "icon": "✨",
-                "title": "迪士尼夜間活動",
-                "addr": "東京迪士尼 Resort",
-                "note": "依當日園區安排彈性調整。",
-                "map": "Tokyo Disneyland",
-                "img": "bg.png"
+                "type": "SHOP",
+                "icon": "🛍️",
+                "title": "買伴手禮・回飯店整理行李",
+                "addr": "澳門巴黎人",
+                "note": "買點喜歡的食物，回飯店整理行李，為隔天離澳做準備。",
+                "map": "The Parisian Macao",
+                "img": "bg3.png"
             }
         ]
     },
     "5": {
         "day": 5,
-        "date": "2026-10-07",
-        "loc": "新宿 · 澀谷 · 東京鐵塔",
-        "en": "Shinjuku - Shibuya - Tokyo Tower",
-        "quote": "新宿と渋谷を歩き、夜は東京タワーから東京の街を眺める一日。",
+        "date": "2026-11-17",
+        "loc": "澳門 · 回程日",
+        "en": "Macau - Departure Day",
+        "quote": "最後整理行李，預留交通與出境時間，平安返程。",
         "img": "bg2.png",
-        "nodes": [
-            {
-                "time": "早上",
-                "type": "SPOT",
-                "icon": "🏙️",
-                "title": "新宿",
-                "addr": "新宿站周邊・都心街區",
-                "note": "自由散步與逛街。",
-                "map": "Shinjuku, Tokyo",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/6/62/Tokyo_Metropolitan_Government_Building_No.1_-_Shinjuku%2C_Tokyo_-_DSC05442.jpg"
-            },
-            {
-                "time": "14:40",
-                "type": "SPOT",
-                "icon": "🌇",
-                "title": "澀谷 SKY",
-                "addr": "SHIBUYA SKY",
-                "note": "✅ 14:40 入場／觀景安排",
-                "map": "SHIBUYA SKY",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Shibuya_Scramble_crossing.jpg"
-            },
-            {
-                "time": "下午",
-                "type": "SPOT",
-                "icon": "📸",
-                "title": "澀谷",
-                "addr": "澀谷站・十字路口周邊",
-                "note": "SHIBUYA SKY 後自由逛街。",
-                "map": "Shibuya, Tokyo",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Shibuya_Scramble_crossing.jpg"
-            },
-            {
-                "time": "14:40",
-                "type": "SPOT",
-                "icon": "🌆",
-                "title": "SHIBUYA SKY",
-                "addr": "澀谷 Scramble Square",
-                "note": "✅ 14:40 行程時間",
-                "map": "SHIBUYA SKY",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Shibuya_Scramble_crossing.jpg"
-            },
-            {
-                "time": "20:00",
-                "type": "SPOT",
-                "icon": "🗼",
-                "title": "東京鐵塔",
-                "addr": "Tokyo Tower",
-                "note": "✅ 20:00 東京鐵塔觀景安排",
-                "map": "Tokyo Tower",
-                "img": "https://upload.wikimedia.org/wikipedia/commons/c/ce/Tokyo_Tower_at_night.jpg"
-            }
-        ]
-    },
-    "6": {
-        "day": 6,
-        "date": "2026-10-08",
-        "loc": "東京 · 回國",
-        "en": "Tokyo - Departure",
-        "quote": "旅の思い出を胸に、東京を後にして帰国。",
-        "img": "bg.png",
         "nodes": [
             {
                 "time": "早上",
                 "type": "HOTEL",
                 "icon": "🧳",
-                "title": "整理行李・Check-out",
-                "addr": "Poka Stay Kamata 暖居浦田",
-                "note": "中午班機，預留前往機場與報到安檢時間。",
-                "map": "Poka Stay Kamata, Kamata, Tokyo",
-                "img": "bg2.png"
+                "title": "整理行李・退房",
+                "addr": "澳門巴黎人",
+                "note": "退房與行李安排依飯店規定；出發前確認交通方式。",
+                "map": "The Parisian Macao",
+                "img": "bg.png"
             },
             {
-                "time": "中午",
-                "type": "FLIGHT",
-                "icon": "✈️",
-                "title": "東京機場起飛・回國",
-                "addr": "東京 → 台灣",
-                "note": "班機時間以你的機票資訊為準。",
-                "map": "",
+                "time": "出發前",
+                "type": "TRANSPORT",
+                "icon": "🚕",
+                "title": "前往機場／口岸",
+                "addr": "依你的返程交通安排",
+                "note": "班機或船班時間尚未提供，先保留彈性並預留交通緩衝。",
+                "map": "Macau International Airport",
                 "img": "bg23.png"
-            },
-            {
-                "time": "旅程結束",
-                "type": "SPOT",
-                "icon": "🏠",
-                "title": "平安回國",
-                "addr": "台灣",
-                "note": "東京 6 天 5 夜旅程結束。",
-                "map": "",
-                "img": "bg3.png"
             }
         ]
     }
@@ -5376,7 +5501,7 @@ body #page-day-detail .v6-day-selector::before {
             const firstCard = carousel.firstElementChild;
             if (!firstCard) return;
             const cardWidth = firstCard.offsetWidth + 16;
-            const activeIndex = Math.min(Math.round(scrollLeft / cardWidth), 5);
+            const activeIndex = Math.min(Math.round(scrollLeft / cardWidth), 4);
             dots.forEach((dot, idx) => {
                 dot.classList.toggle('active', idx === activeIndex);
             });
@@ -5431,7 +5556,7 @@ body #page-day-detail .v6-day-selector::before {
             }
 
             // 更新 Top Tabs 狀態（只切換 active，不改掉上方 icon 結構）
-            for(let i=1; i<=6; i++) {
+            for(let i=1; i<=5; i++) {
                 const tabEl = document.getElementById(`tab-d${i}`);
                 if (tabEl) {
                     tabEl.classList.toggle('active', i === dayNum);
@@ -5443,7 +5568,7 @@ body #page-day-detail .v6-day-selector::before {
             const btnPrev = document.getElementById('btnPrevDay');
             const btnNext = document.getElementById('btnNextDay');
             if (btnPrev) btnPrev.style.visibility = dayNum === 1 ? 'hidden' : 'visible';
-            if (btnNext) btnNext.style.visibility = dayNum === 6 ? 'hidden' : 'visible';
+            if (btnNext) btnNext.style.visibility = dayNum === 5 ? 'hidden' : 'visible';
 
             // 判斷當前進行中站點 (NOW)
             const now = getCurrentDateObj();
@@ -5790,7 +5915,7 @@ body #page-day-detail .v6-day-selector::before {
 
         function changeDay(delta) {
             let target = currentDay + delta;
-            if (target >= 1 && target <= 6) {
+            if (target >= 1 && target <= 5) {
                 renderDay(target);
             }
         }
@@ -5867,7 +5992,7 @@ body #page-day-detail .v6-day-selector::before {
                     if (p.id === 'page-day-detail') {
                         const scrollContainer = document.getElementById('scrollContent');
                         const day = Number(currentDay);
-                        const validDay = Number.isInteger(day) && day >= 1 && day <= 6 && !!fullItinerary[day];
+                        const validDay = Number.isInteger(day) && day >= 1 && day <= 5 && !!fullItinerary[day];
 
                         if (!validDay) {
                             p.style.display = 'none';
