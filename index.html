@@ -5743,17 +5743,6 @@ body #page-day-detail .v6-day-selector::before {
             `;
 
 
-            const dinnerCard = document.getElementById('dinner-meal-card');
-            if (dinnerCard) {
-                const dinnerName = dinnerCard.querySelector('.meal-name');
-                const dinnerDesc = dinnerCard.querySelector('.meal-placeholder');
-                if (data.day === 3) {
-                    dinnerCard.classList.add('reserved');
-                    if (dinnerName) dinnerName.textContent = 'LOUNGE｜已預約';
-                    if (dinnerDesc) dinnerDesc.innerHTML = '10/5 已預約 LOUNGE 餐廳<br>實際時間依訂位資訊為準';
-                }
-            }
-
             scrollContainer.classList.add('fade-in');
 
             if (activeNowIndex !== -1) {
