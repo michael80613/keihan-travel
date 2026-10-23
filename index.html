@@ -4632,6 +4632,16 @@ body #page-day-detail .footer-nav-center.v6-three-action-dock {
   background:#f8f3e9 !important;background-image:none !important;
 }
 </style>
+
+<style id="meal-cleanup-fallback">
+/* 保險規則：若瀏覽器或舊模板殘留餐食佔位區，所有每日頁面都不顯示。 */
+#page-day-detail .meal-section,
+#page-day-detail .meal-section-title,
+#page-day-detail .meal-grid,
+#page-day-detail .meal-card,
+#page-day-detail #dinner-meal-card { display: none !important; }
+</style>
+
 </head>
 <body>
 
@@ -6307,6 +6317,36 @@ body #page-day-detail .footer-nav-center.v6-three-action-dock {
         if (directory) observer.observe(directory, { attributes: true, attributeFilter: ['class', 'style'] });
         requestAnimationFrame(updateDirectoryScale);
     });
+})();
+</script>
+
+
+<script id="meal-cleanup-fallback-script">
+(function () {
+  function removeMealPlaceholders() {
+    const root = document.getElementById('scrollContent') || document.getElementById('page-day-detail');
+    if (!root) return;
+    root.querySelectorAll('.meal-section, .meal-section-title, .meal-grid, .meal-card, #dinner-meal-card').forEach(function (node) {
+      node.remove();
+    });
+    root.querySelectorAll('*').forEach(function (node) {
+      if (node.children.length === 0 && /^(食事安排|LUNCH \/ 中餐|DINNER \/ 晚餐)$/.test((node.textContent || '').trim())) {
+        const card = node.closest('.meal-card');
+        const section = node.closest('.meal-section');
+        if (card) card.remove();
+        else if (section) section.remove();
+        else node.remove();
+      }
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function () {
+    removeMealPlaceholders();
+    const root = document.getElementById('scrollContent');
+    if (root && 'MutationObserver' in window) {
+      new MutationObserver(removeMealPlaceholders).observe(root, { childList: true, subtree: true });
+    }
+  });
+  removeMealPlaceholders();
 })();
 </script>
 
