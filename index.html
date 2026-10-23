@@ -1749,7 +1749,7 @@
         #page-day-detail .ride-close-btn span { position:relative; z-index:1; }
 
 
-        /* ================= 即時車況：霧玻璃雙入口（風格升級版） ================= */
+        /* ================= 交通資訊：霧玻璃雙入口（風格升級版） ================= */
         #page-train {
             background: rgba(247, 241, 232, 0.56) !important;
             backdrop-filter: blur(18px);
@@ -2108,7 +2108,7 @@
             padding: 4px 2px;
         }
 
-        /* 即時車況：沿用雙入口，但放進共用毛玻璃框 */
+        /* 交通資訊：沿用雙入口，但放進共用毛玻璃框 */
         #page-train .traffic-glass-card {
             max-width: none;
             width: 100%;
@@ -4519,6 +4519,171 @@ body #page-day-detail .v6-day-selector::before {
 }
 </style>
 
+
+<style id="macau-portuguese-reskin">
+:root {
+  --ink: #173b4d !important;
+  --accent-red: #ad5846 !important;
+  --gold: #b89a60 !important;
+  --bg-sand: #f8f3e9 !important;
+  --soft-paper: #f4eee3 !important;
+  --card-bg: #fffdf8 !important;
+  --card-border: #cbd9d8 !important;
+  --gold-subtle: #b89a60 !important;
+}
+html, body { background: #102d3b !important; color: var(--ink); }
+.app-container { background: #f8f3e9 !important; box-shadow: 0 22px 60px rgba(4,26,38,.42) !important; }
+.page {
+  background-color: #183f50 !important;
+  background-image: linear-gradient(180deg, rgba(10,42,57,.15) 0%, rgba(12,46,62,.36) 43%, rgba(12,46,62,.76) 100%), url("https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+.page::before {
+  content: "" !important; position: absolute !important; inset: 0 !important; z-index: 1 !important; pointer-events: none !important;
+  opacity: .15 !important;
+  background-image: repeating-linear-gradient(45deg, transparent 0 17px, rgba(255,255,255,.24) 17px 18px, transparent 18px 35px),
+                    repeating-linear-gradient(-45deg, transparent 0 17px, rgba(255,255,255,.18) 17px 18px, transparent 18px 35px) !important;
+}
+.top-tag {
+  writing-mode: horizontal-tb !important; top: max(20px, env(safe-area-inset-top)) !important; left: 50% !important; right: auto !important;
+  transform: translateX(-50%) !important; white-space: nowrap !important; padding: 9px 16px !important;
+  color: #fffaf0 !important; background: rgba(15,54,71,.82) !important; border: 1px solid rgba(255,255,255,.48) !important;
+  border-radius: 999px !important; letter-spacing: .12em !important; font-family: "Cinzel","Noto Serif TC",serif !important;
+  backdrop-filter: blur(10px) !important; opacity: 1 !important;
+}
+.top-tag::before { display:none !important; }
+.header-content {
+  position: relative !important; z-index: 2 !important; width: calc(100% - 42px) !important;
+  margin-top: clamp(88px, 14vh, 132px) !important; padding: 24px 18px 18px !important;
+  border: 1px solid rgba(255,255,255,.78) !important; border-radius: 26px !important;
+  background: rgba(255,251,241,.90) !important; box-shadow: 0 15px 34px rgba(5,26,36,.20) !important;
+  backdrop-filter: blur(10px) !important; -webkit-backdrop-filter: blur(10px) !important;
+}
+.macau-mark {
+  width: 34px; height: 34px; border: 1.5px solid #245e74; border-radius: 50%;
+  display: grid; place-items: center; color: #245e74; font: 700 19px/1 "Cinzel",serif;
+  margin-bottom: 10px; position: relative;
+}
+.macau-mark::after { content:""; position:absolute; inset:4px; border:1px solid rgba(173,88,70,.65); border-radius:50%; }
+.main-title {
+  writing-mode: horizontal-tb !important; text-orientation: mixed !important; font-size: clamp(44px, 8vh, 66px) !important;
+  line-height: 1.12 !important; letter-spacing: .22em !important; padding-left: .22em !important;
+  color: #153d52 !important; font-weight: 900 !important;
+}
+.sub-title-ch { color: #ad5846 !important; letter-spacing: .3em !important; font-size: clamp(18px, 3vh, 25px) !important; }
+.collage-text { color: #3b7181 !important; letter-spacing: .22em !important; font-size: 10px !important; }
+.gold-divider { margin: 10px 0 12px !important; gap: 14px !important; }
+.gold-line { background: linear-gradient(90deg, transparent, #b89a60, #3d7889, transparent) !important; width: 58px !important; }
+.azulejo-diamond { color:#2c7188; font-size:17px; line-height:1; text-shadow: 0 0 0 #fff; }
+.jp-quote { color: #3f6570 !important; letter-spacing: .06em !important; font-size: 12px !important; margin-bottom: 2px !important; }
+.stamp-container {
+  z-index: 3 !important; width: 190px !important; height: 50px !important; aspect-ratio: auto !important;
+  margin-top: 18px !important; margin-bottom: 20px !important; border-radius: 999px !important;
+  animation: none !important; cursor:pointer; background: #17495e !important; border: 1px solid #e5d5b4 !important;
+  box-shadow: 0 9px 22px rgba(8,35,48,.27) !important; color:#fff9eb !important;
+}
+.stamp-box, .outer-solid, .inner-dash { display:none !important; }
+.stamp-text { opacity:1 !important; color:#fff9eb !important; font-size:13px !important; letter-spacing:.12em !important; }
+#sealImage { display:none !important; }
+#view-directory {
+  background-color: #f8f3e9 !important;
+  background-image: linear-gradient(180deg,rgba(248,243,233,.88),rgba(248,243,233,.96)), url("https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg") !important;
+  background-size: cover !important; background-position: center !important;
+}
+#view-directory .dir-header h2 { color:#173b4d !important; letter-spacing:.11em !important; }
+#view-directory .index-label { color:#ad5846 !important; letter-spacing:.22em !important; }
+#view-directory .card {
+  border:1px solid rgba(44,102,121,.28) !important; border-radius:22px !important;
+  box-shadow:0 14px 28px rgba(20,59,74,.15) !important; overflow:hidden !important;
+}
+#view-directory .card .day-ribbon { background:#17495e !important; color:#fff9eb !important; }
+#view-directory .card-info { background:linear-gradient(180deg,rgba(255,253,248,.98),rgba(246,240,228,.96)) !important; }
+#view-directory .card-info h3 { color:#173b4d !important; }
+#view-directory .carousel-dots .dot.active { background:#ad5846 !important; }
+#view-directory .back-btn-styled { color:#173b4d !important; border-color:rgba(44,102,121,.3) !important; background:rgba(255,253,248,.9) !important; }
+.func-item span { color:#244b5c !important; }
+.mop-icon {
+  width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:15px;
+  color:#fff9eb;background:linear-gradient(145deg,#1b5268,#12394b);font:800 13px "Cinzel",serif;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);
+}
+.bus-icon { width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:15px;background:#e1eceb;font-size:29px; }
+#page-day-detail .day-phone-frame {
+  background-color:#f7f2e8 !important;
+  background-image:
+    radial-gradient(circle at 0 0, rgba(39,105,128,.12) 0 2px, transparent 2.5px),
+    radial-gradient(circle at 28px 28px, rgba(39,105,128,.12) 0 2px, transparent 2.5px),
+    linear-gradient(45deg, transparent 48%, rgba(39,105,128,.035) 49% 51%, transparent 52%) !important;
+  background-size:56px 56px,56px 56px,56px 56px !important;
+}
+#page-day-detail .main-scroll-content { background:transparent !important; background-image:none !important; }
+#page-day-detail .day-top-scene {
+  background:#173f52 !important;
+  background-image:linear-gradient(135deg,#153d52 0%,#245d70 64%,#2f7180 100%) !important;
+}
+#page-day-detail .day-top-scene::after {
+  content:"MACAU · HERITAGE & FLAVOURS"; display:block; color:rgba(255,249,235,.82);
+  font:600 8px "Cinzel",serif; letter-spacing:.22em; text-align:center; padding:4px 0 0;
+}
+#fixedBgLeaf, #page-day-detail .autumn-header-art, #page-day-detail .seal-stamp-art,
+#page-day-detail .autumn-leaf-float, #page-day-detail .mini-stamp-icon,
+#page-day-detail .active-tab-flower, .btn-tower-icon { display:none !important; }
+#page-day-detail .header-art-zone { background:transparent !important; padding-top:20px !important; }
+#page-day-detail .day-big-title { color:#153d52 !important; font-family:"Cinzel","Noto Serif TC",serif !important; letter-spacing:.12em !important; }
+#page-day-detail .day-sub-location { color:#ad5846 !important; }
+#page-day-detail .day-en-location { color:#3a7181 !important; font-family:"Cinzel",serif !important; }
+#page-day-detail .day-jp-quote { color:#59747b !important; }
+#page-day-detail .hero-banner-img { border-radius:16px !important; box-shadow:0 8px 22px rgba(18,57,74,.15) !important; border:1px solid rgba(44,102,121,.18) !important; }
+#page-day-detail .v6-day-selector {
+  background:linear-gradient(180deg,rgba(247,242,232,.98),rgba(247,242,232,.9)) !important;
+  border-bottom:1px solid rgba(39,105,128,.17) !important;
+}
+#page-day-detail .v6-day-chip {
+  background:#fffcf5 !important; border:1px solid rgba(39,105,128,.2) !important; color:#245468 !important;
+}
+#page-day-detail .v6-day-chip.active { background:#17495e !important; border-color:#17495e !important; color:#fff9eb !important; }
+#page-day-detail .timeline-line { background:rgba(39,105,128,.28) !important; }
+#page-day-detail .timeline-dot, #page-day-detail .node-dot, #page-day-detail .dot-marker {
+  background:#ad5846 !important; box-shadow:0 0 0 3px rgba(173,88,70,.10) !important;
+}
+#page-day-detail .timeline-time, #page-day-detail .node-time, #page-day-detail .time-label { color:#356879 !important; }
+#page-day-detail .node-card {
+  background:rgba(255,253,248,.97) !important; border:1px solid rgba(39,105,128,.2) !important;
+  border-radius:18px !important; box-shadow:0 5px 15px rgba(29,69,83,.06) !important;
+}
+#page-day-detail .card-title { color:#173b4d !important; }
+#page-day-detail .card-note-box { background:rgba(234,222,195,.35) !important; border-left-color:#b89a60 !important; }
+#page-day-detail .btn-map, #page-day-detail .btn-nav { background:#17495e !important; color:#fffaf0 !important; border-color:#17495e !important; }
+#page-day-detail .section-title-divider span { color:#173b4d !important; }
+body #page-day-detail .v6-day-selector::before { background:rgba(247,242,232,.98) !important; }
+body #page-day-detail .bottom-nav-bar.v6-bottom-shell {
+  background:linear-gradient(180deg,rgba(247,242,232,0),rgba(247,242,232,.84)) !important;
+  background-image:linear-gradient(180deg,rgba(247,242,232,0),rgba(247,242,232,.84)) !important;
+}
+body #page-day-detail .footer-nav-center.v6-three-action-dock {
+  background:rgba(255,253,248,.92) !important; border:1px solid rgba(39,105,128,.18) !important;
+  box-shadow:0 5px 18px rgba(18,57,74,.12) !important;
+}
+#page-air, #page-train, #page-suitcase, #page-rate { background:rgba(18,57,74,.26) !important; }
+#page-air .utility-popup-inner, #page-train .utility-popup-inner, #page-suitcase .utility-popup-inner, #page-rate .utility-popup-inner {
+  background:linear-gradient(135deg,rgba(255,253,248,.97),rgba(241,236,222,.97)) !important;
+  border:1px solid rgba(39,105,128,.22) !important; border-radius:24px !important;
+}
+#page-air .utility-popup-head, #page-train .utility-popup-head, #page-suitcase .utility-popup-head, #page-rate .utility-popup-head {
+  background:linear-gradient(135deg,#153d52,#2b6a7b) !important; color:#fff9ec !important;
+}
+#page-air .utility-popup-title, #page-train .utility-popup-title, #page-suitcase .utility-popup-title, #page-rate .utility-popup-title,
+#page-air .utility-popup-sub, #page-train .utility-popup-sub, #page-suitcase .utility-popup-sub, #page-rate .utility-popup-sub,
+#page-air .utility-popup-kicker, #page-train .utility-popup-kicker, #page-suitcase .utility-popup-kicker, #page-rate .utility-popup-kicker { color:#fff9ec !important; }
+#page-day-detail .meal-card { background:rgba(255,253,248,.95) !important; border-color:rgba(39,105,128,.22) !important; }
+@media (max-width:380px) {
+  .header-content { width:calc(100% - 28px) !important; padding:20px 12px 16px !important; }
+  .main-title { font-size:50px !important; }
+  .stamp-container { margin-top:14px !important; }
+}
+</style>
+
 </head>
 <body>
 
@@ -4526,27 +4691,27 @@ body #page-day-detail .v6-day-selector::before {
         <!-- [1. 首頁] -->
         <section id="view-splash" class="view-section active">
             <main class="page">
-                <div class="top-tag">二〇二六 · 十月</div>
+                <div class="top-tag">澳門 · 11/13—11/17</div>
                 <div class="header-content">
-                    <img src="tower.png" class="tower-icon" alt="Tower" onerror="this.style.opacity='0'">
+                    <div class="macau-mark" aria-hidden="true">M</div>
                     <div class="main-title">澳門</div>
-                    <div class="sub-title-ch">旅記</div>
-                    <div class="collage-text">MACAU / 5 DAYS</div>
+                    <div class="sub-title-ch">五日漫遊</div>
+                    <div class="collage-text">MACAU · FIVE DAYS</div>
                     <div class="gold-divider">
                         <div class="gold-line"></div>
-                        <img src="maple.png" alt="maple" style="width: 18px; height: auto; opacity: 0.9;" onerror="this.style.display='none'">
+                        <span class="azulejo-diamond" aria-hidden="true">✦</span>
                         <div class="gold-line"></div>
                     </div>
-                    <div class="jp-quote">澳門的旅程，慢慢開始。</div>
+                    <div class="jp-quote">葡式街景、地道美食與海風記憶</div>
                 </div>
 
                 <div class="stamp-container" id="stampArea">
                     <div class="stamp-box">
                         <div class="outer-solid"></div>
                         <div class="inner-dash"></div>
-                        <div class="stamp-text"><div style="margin-top:3px;">ここを押して下さい</div></div>
+                        <div class="stamp-text"><div style="margin-top:3px;">點此開啟旅程</div></div>
                     </div>
-                    <img src="seal.png" id="sealImage" alt="Seal" onerror="this.style.display='none'">
+                    
                 </div>
             </main>
         </section>
@@ -4568,12 +4733,12 @@ body #page-day-detail .v6-day-selector::before {
             
             <div class="func-grid">
                 <div class="func-item" onclick="openDetail('page-air')"><div class="func-icon-only"><img src="Air.png" onerror="this.outerHTML='<div class=\'func-icon-fallback\'>✈</div>'"></div><span>航班資訊</span></div>
-                <div class="func-item" onclick="openDetail('page-train')"><div class="func-icon-only"><img src="Train.png" onerror="this.outerHTML='<div class=\'func-icon-fallback\'>🚃</div>'"></div><span>即時車況</span></div>
+                <div class="func-item" onclick="openDetail('page-train')"><div class="func-icon-only"><span class="bus-icon">🚌</span></div><span>交通資訊</span></div>
                 <div class="func-item" onclick="openDetail('page-suitcase')"><div class="func-icon-only"><img src="Suitcase.png" onerror="this.outerHTML='<div class=\'func-icon-fallback\'>🧳</div>'"></div><span>行前準備</span></div>
-                <div class="func-item" onclick="openDetail('page-rate')"><div class="func-icon-only"><img src="Currency.png" onerror="this.outerHTML='<div class=\'func-icon-fallback\'>¥</div>'"></div><span>日幣匯率</span></div>
+                <div class="func-item" onclick="openDetail('page-rate')"><div class="func-icon-only"><span class="mop-icon">MOP</span></div><span>澳門幣換算</span></div>
             </div>
 <button class="back-btn-styled" onclick="location.reload()">
-                <img src="tower2.png" class="btn-tower-icon" alt="Tower" onerror="this.style.display='none'">
+                <img src="tower2.png" class="btn-tower-icon" alt="Macau" onerror="this.style.display='none'">
                 回到旅程起點
                 <span class="btn-arrow">→</span>
             </button>
@@ -4610,28 +4775,28 @@ body #page-day-detail .v6-day-selector::before {
             </div>
         </div>
 
-        <!-- [5. 即時車況彈窗] -->
+        <!-- [5. 交通資訊彈窗] -->
         <div id="page-train" class="view-detail-page utility-popup-page" onclick="utilityBackdropClose(event,'page-train')">
             <div class="utility-popup-shell" onclick="event.stopPropagation()">
                 <div class="utility-popup-inner">
                     <div class="utility-popup-head">
-                        <div class="utility-popup-kicker">REAL-TIME TRANSIT</div>
-                        <h2 class="utility-popup-title">即時車況</h2>
+                        <div class="utility-popup-kicker">MACAU TRANSPORT</div>
+                        <h2 class="utility-popup-title">交通資訊</h2>
                         <div class="utility-popup-sub">澳門交通運行資訊</div>
                         <button class="utility-popup-close" type="button" onclick="closeDetail('page-train')" aria-label="關閉">×</button>
                     </div>
                     <div class="utility-glass-panel">
                         <div class="traffic-glass-card">
                             <div class="traffic-inner">
-                                <div class="traffic-intro"><p>點選下方入口，快速查看最新運行資訊。</p></div>
+                                <div class="traffic-intro"><p>查詢澳門公車資訊、站點位置與市區交通。</p></div>
                                 <div class="traffic-circle-row">
-                                    <a class="traffic-circle-link yahoo-link" href="https://transit.yahoo.co.jp/diainfo/" target="_blank" rel="noopener">
-                                        <div class="traffic-circle yahoo-circle"><img src="yahoo.png" alt="Yahoo! 交通資訊"></div>
-                                        <div><div class="traffic-source-title">Yahoo! 交通資訊</div><div class="traffic-source-sub">全國鐵道運行資訊</div></div>
+                                    <a class="traffic-circle-link yahoo-link" href="https://www.dsat.gov.mo/" target="_blank" rel="noopener">
+                                        <div class="traffic-circle yahoo-circle"><img src="yahoo.png" alt="澳門交通事務局"></div>
+                                        <div><div class="traffic-source-title">澳門交通事務局 DSAT</div><div class="traffic-source-sub">官方交通與公車資訊</div></div>
                                     </a>
-                                    <a class="traffic-circle-link navitime-link" href="https://japantravel.navitime.com/zh-tw/area/jp/railroad/" target="_blank" rel="noopener">
-                                        <div class="traffic-circle navitime-circle"><img src="navitime1.png" alt="NAVITIME 路線資訊"></div>
-                                        <div><div class="traffic-source-title">NAVITIME</div><div class="traffic-source-sub">澳門交通資訊</div></div>
+                                    <a class="traffic-circle-link navitime-link" href="https://www.google.com/maps/search/?api=1&query=Macau+Bus+Stops" target="_blank" rel="noopener">
+                                        <div class="traffic-circle navitime-circle"><img src="navitime1.png" alt="澳門公車站點"></div>
+                                        <div><div class="traffic-source-title">澳門公車站點</div><div class="traffic-source-sub">Google Maps 站點搜尋</div></div>
                                     </a>
                                 </div>
                                 <div class="traffic-note">點擊後會開啟對應網頁，需要網路連線。</div>
@@ -4674,9 +4839,9 @@ body #page-day-detail .v6-day-selector::before {
                                     <label class="prep-item"><input type="checkbox"><span class="item-text">身分證</span></label>
                                     <label class="prep-item"><input type="checkbox"><span class="item-text">機票訂位／航班資訊截圖</span></label>
                                     <label class="prep-item"><input type="checkbox"><span class="item-text">住宿訂房確認／飯店地址截圖</span></label>
-                                    <label class="prep-item"><input type="checkbox"><span class="item-text">Visit Japan Web<p>完成填寫並保留入境 QR Code</p></span></label>
-                                    <label class="prep-item"><input type="checkbox"><span class="item-text">JR HARUKA 電子憑證</span></label>
-                                    <label class="prep-item"><input type="checkbox"><span class="item-text">ICOCA／交通卡</span></label>
+                                    <label class="prep-item"><input type="checkbox"><span class="item-text">入境文件<p>確認澳門入境所需文件與入境安排</p></span></label>
+                                    <label class="prep-item"><input type="checkbox"><span class="item-text">機票／船票與交通預訂資料</span></label>
+                                    <label class="prep-item"><input type="checkbox"><span class="item-text">澳門公車支付方式／零錢</span></label>
                                     <label class="prep-item"><input type="checkbox"><span class="item-text">旅遊平安險／保險資料</span></label>
                                     <label class="prep-item"><input type="checkbox"><span class="item-text">重要聯絡資訊／緊急電話截圖</span></label>
                                 </div>
@@ -4685,7 +4850,7 @@ body #page-day-detail .v6-day-selector::before {
                             <div class="prep-panel" data-prep-panel="1">
                                 <div class="checklist-column">
                                     <div class="prep-section-title">金流與支付</div>
-                                    <label class="prep-item"><input type="checkbox"><span class="item-text">日幣現金</span></label>
+                                    <label class="prep-item"><input type="checkbox"><span class="item-text">澳門幣／港幣現金</span></label>
                                     <label class="prep-item"><input type="checkbox"><span class="item-text">零錢包</span></label>
                                     <label class="prep-item"><input type="checkbox"><span class="item-text">主要信用卡</span></label>
                                     <label class="prep-item"><input type="checkbox"><span class="item-text">備用信用卡</span></label>
@@ -4814,24 +4979,24 @@ body #page-day-detail .v6-day-selector::before {
             <div class="utility-popup-shell" onclick="event.stopPropagation()">
                 <div class="utility-popup-inner">
                     <div class="utility-popup-head">
-                        <div class="utility-popup-kicker">JPY ⇄ TWD</div>
-                        <h2 class="utility-popup-title">日幣匯率換算</h2>
+                        <div class="utility-popup-kicker">MOP ⇄ TWD</div>
+                        <h2 class="utility-popup-title">澳門幣換算</h2>
                         <div class="utility-popup-sub">旅途中快速換算價格</div>
                         <button class="utility-popup-close" type="button" onclick="closeDetail('page-rate')" aria-label="關閉">×</button>
                     </div>
                     <div class="utility-glass-panel">
                         <div class="rate-calc-box">
                             <div class="rate-config-row">
-                                <span>即時匯率 (1 JPY = TWD)：</span>
+                                <span>換算匯率 (1 MOP = TWD)：</span>
                                 <div class="rate-input-wrap">
-                                    <input type="number" id="customRateInput" step="0.0001" value="0.215" readonly aria-label="目前日圓兌台幣匯率">
+                                    <input type="number" id="customRateInput" step="0.0001" value="4.05" readonly aria-label="目前澳門幣兌台幣匯率">
                                     <button type="button" class="rate-refresh-btn" onclick="fetchLiveRate(true)" aria-label="重新抓取即時匯率">↻</button>
                                 </div>
                             </div>
                             <div style="font-size:11px;color:#888;text-align:right;margin-top:-8px;margin-bottom:12px;" id="rateStatusText">（連線時會自動抓取最新匯率）</div>
-                            <div class="calc-field"><label>日圓 (JPY ¥)</label><input type="number" id="inputJPY" placeholder="0" oninput="calcJPYtoTWD()"></div>
+                            <div class="calc-field"><label>澳門幣 (MOP $)</label><input type="number" id="inputMOP" placeholder="0" oninput="calcMOPtoTWD()"></div>
                             <div class="calc-arrow-divider">⇅</div>
-                            <div class="calc-field"><label>新台幣 (TWD NT$)</label><input type="number" id="inputTWD" placeholder="0" oninput="calcTWDtoJPY()"></div>
+                            <div class="calc-field"><label>新台幣 (TWD NT$)</label><input type="number" id="inputTWD" placeholder="0" oninput="calcTWDtoMOP()"></div>
                         </div>
                     </div>
                 </div>
@@ -4907,7 +5072,7 @@ body #page-day-detail .v6-day-selector::before {
                             <div class="quick-tool-icon-box">
                                 <img src="Train.png" onerror="this.outerHTML='<span style=\'font-size:20px;\'>🚃</span>'">
                             </div>
-                            <span>即時車況</span>
+                            <span>交通資訊</span>
                         </div>
                     </div>
                 </div>
@@ -4951,7 +5116,7 @@ body #page-day-detail .v6-day-selector::before {
                                         <span id="rideDurationText">約 4 分鐘 <span style="font-size:10px;font-weight:400;color:#8c8070;">(2 站)</span></span>
                                     </div>
                                     <div class="ride-meta-right">
-                                        <a class="ride-live-link" id="rideLiveLink" href="https://transit.yahoo.co.jp/diainfo/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                                        <a class="ride-live-link" id="rideLiveLink" href="https://www.dsat.gov.mo/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
                                             <div class="ride-live-badge"></div>
                                             <span class="ride-live-text">即時運行資訊 ↗</span>
                                         </a>
@@ -5000,7 +5165,7 @@ body #page-day-detail .v6-day-selector::before {
         "loc": "澳門半島 · 老城美食散步",
         "en": "Macau Peninsula - Historic Centre & Food",
         "quote": "用咖哩、粥麵與葡式小吃，慢慢開啟澳門旅程。",
-        "img": "bg.png",
+        "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg",
         "nodes": [
             {
                 "time": "抵達後",
@@ -5010,7 +5175,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "寄放行李",
                 "note": "先到飯店寄放行李，確認寄放與入住安排。",
                 "map": "Sofitel Macau At Ponte 16",
-                "img": "bg2.png"
+                "img": "https://www.ahstatic.com/photos/6480_ho_03_p_2048x1536.jpg"
             },
             {
                 "time": "早午餐",
@@ -5020,7 +5185,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "咖哩小吃",
                 "note": "兩人可以分一份，留點胃給下一站。",
                 "map": "牛記咖哩 澳門",
-                "img": "bg3.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "接著",
@@ -5030,7 +5195,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "水蟹粥・蝦子撈麵・乾炒牛河",
                 "note": "想吃的品項：水蟹粥、蝦子撈麵、乾炒牛河；依食量分享。",
                 "map": "六記粥麵 澳門",
-                "img": "bg.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "散步途中",
@@ -5040,7 +5205,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "前往大三巴路上",
                 "note": "順路買檸檬飲品。",
                 "map": "永吉檸檬 澳門",
-                "img": "bg2.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "下午",
@@ -5050,7 +5215,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "Ruins of St. Paul's",
                 "note": "可順路看看旁邊的哪吒廟與大坑遺址。",
                 "map": "Ruins of St. Paul's Macau",
-                "img": "bg23.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "下午",
@@ -5060,7 +5225,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "大炮台",
                 "note": "了解澳門歷史與文化，出發前確認開放時間。",
                 "map": "Macao Museum",
-                "img": "bg.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "途中採買",
@@ -5070,7 +5235,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "手信／餅家",
                 "note": "有需要可以買伴手禮。",
                 "map": "咀香園餅家 澳門",
-                "img": "bg3.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "接著搭車",
@@ -5080,7 +5245,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "葡式蛋撻口味雞蛋仔",
                 "note": "兩人一份即可，先確認分店位置。",
                 "map": "澤賢記 澳門",
-                "img": "bg2.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "下午茶",
@@ -5090,7 +5255,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "Margaret's Café e Nata",
                 "note": "安排一份蛋撻當點心。",
                 "map": "瑪嘉烈蛋撻店 澳門",
-                "img": "bg.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "傍晚",
@@ -5100,7 +5265,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "澳門小吃",
                 "note": "依當天胃口決定是否加吃。",
                 "map": "明記牛雜 澳門",
-                "img": "bg3.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "晚上",
@@ -5110,7 +5275,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "澳門十六浦索菲特酒店",
                 "note": "第一天以老城區步行與小吃為主，晚上回飯店放鬆。",
                 "map": "Sofitel Macau At Ponte 16",
-                "img": "bg2.png"
+                "img": "https://www.ahstatic.com/photos/6480_ho_03_p_2048x1536.jpg"
             }
         ]
     },
@@ -5120,7 +5285,7 @@ body #page-day-detail .v6-day-selector::before {
         "loc": "新馬路 · 大賽車 · 漁人碼頭",
         "en": "Macau City - Grand Prix & Waterfront",
         "quote": "睡飽再出發，從老澳門早餐一路走到海邊。",
-        "img": "bg2.png",
+        "img": "https://5b0988e595225.cdn.sohucs.com/images/20191114/eb9764ed0e7b42c08fb4395590316463.jpeg",
         "nodes": [
             {
                 "time": "09:00–10:00 出門",
@@ -5130,7 +5295,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "厚蛋叉燒三明治・沙翁",
                 "note": "睡到飽後再出門，早餐吃招牌三明治與沙翁。",
                 "map": "南屏雅敘 澳門",
-                "img": "bg.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "早餐後",
@@ -5140,7 +5305,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "椰子雪糕",
                 "note": "當作散步中的甜點。",
                 "map": "洪馨記 澳門",
-                "img": "bg3.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "接著",
@@ -5150,7 +5315,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "腸粉",
                 "note": "依食量決定是否加點。",
                 "map": "倫記軟滑腸粉 澳門",
-                "img": "bg2.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "搭車前往",
@@ -5160,7 +5325,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "Tap Seac Square",
                 "note": "在廣場附近散步，再前往咖啡店與博物館區。",
                 "map": "Tap Seac Square Macau",
-                "img": "bg23.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             },
             {
                 "time": "中午",
@@ -5170,7 +5335,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "咖啡／簡餐",
                 "note": "安排在大賽車博物館前後。",
                 "map": "Grandstand Café Macau",
-                "img": "bg.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             },
             {
                 "time": "下午",
@@ -5180,7 +5345,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "Macao Grand Prix Museum",
                 "note": "一般週二休館，出發前確認開放時間。",
                 "map": "Macao Grand Prix Museum",
-                "img": "bg2.png"
+                "img": "https://www.impromptuprojects.com/imagens/projectos/macao_grand_prix_museum_61165269b53e5.jpg"
             },
             {
                 "time": "順路拍照",
@@ -5190,7 +5355,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "Lotus Square",
                 "note": "短暫停留拍照。",
                 "map": "Lotus Square Macau",
-                "img": "bg3.png"
+                "img": "https://www.impromptuprojects.com/imagens/projectos/macao_grand_prix_museum_61165269b53e5.jpg"
             },
             {
                 "time": "下午至傍晚",
@@ -5200,7 +5365,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "Fisherman's Wharf",
                 "note": "沿海邊散步、看建築與海景。",
                 "map": "Macau Fisherman's Wharf",
-                "img": "bg23.png"
+                "img": "https://5b0988e595225.cdn.sohucs.com/images/20191114/eb9764ed0e7b42c08fb4395590316463.jpeg"
             },
             {
                 "time": "晚餐",
@@ -5210,7 +5375,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "葡式料理",
                 "note": "晚餐安排在漁人碼頭附近行程之後。",
                 "map": "新海灣葡式美食 澳門",
-                "img": "bg.png"
+                "img": "https://5b0988e595225.cdn.sohucs.com/images/20191114/eb9764ed0e7b42c08fb4395590316463.jpeg"
             },
             {
                 "time": "飯後散步",
@@ -5220,7 +5385,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "澳門科學館海旁",
                 "note": "吃飽後走去拍照，若累了可略過。",
                 "map": "Macao Science Center",
-                "img": "bg2.png"
+                "img": "https://5b0988e595225.cdn.sohucs.com/images/20191114/eb9764ed0e7b42c08fb4395590316463.jpeg"
             },
             {
                 "time": "回程",
@@ -5230,7 +5395,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "澳門十六浦索菲特酒店",
                 "note": "交通估算：計程車約 MOP 90–120／20 分鐘；公車 MT4 約 MOP 6／45 分鐘，實際依起訖點與路況為準。",
                 "map": "Sofitel Macau At Ponte 16",
-                "img": "bg3.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             }
         ]
     },
@@ -5240,7 +5405,7 @@ body #page-day-detail .v6-day-selector::before {
         "loc": "退房 · 官也街 · 路環",
         "en": "Taipa & Coloane - Snacks and Pandas",
         "quote": "退房後把行李寄放好，再慢慢探索氹仔與路環。",
-        "img": "bg23.png",
+        "img": "https://cdn.hk01.com/di/media/images/dw/20230619/747518524427341824904813.jpeg/vnp27BwgObCu6nrhy4tRwizjXqaxcouW9Q0MBvUNDAY",
         "nodes": [
             {
                 "time": "早上",
@@ -5250,7 +5415,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "澳門十六浦索菲特酒店",
                 "note": "退房前確認行李與隨身物品。",
                 "map": "Sofitel Macau At Ponte 16",
-                "img": "bg2.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             },
             {
                 "time": "早上",
@@ -5260,7 +5425,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "正牌車厘哥夫一帶",
                 "note": "依當日公車班次與交通狀況安排。",
                 "map": "車厘哥夫 澳門",
-                "img": "bg.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             },
             {
                 "time": "上午",
@@ -5270,7 +5435,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "杏仁餅／澳門手信",
                 "note": "前幾天若沒買到杏仁餅，可以在這裡補買。",
                 "map": "鉅記餅家 官也街 澳門",
-                "img": "bg3.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "早午餐",
@@ -5280,7 +5445,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "Rua do Cunha, Taipa",
                 "note": "在官也街附近找早午餐、邊走邊吃。",
                 "map": "官也街 澳門",
-                "img": "bg23.png"
+                "img": "https://owsc.wynnresortsmacau.com/tourists/%5BDesktop%5DTourist%20Information_Visa.jpg"
             },
             {
                 "time": "中午",
@@ -5290,7 +5455,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "The Parisian Macao",
                 "note": "抵達後先確認行李寄放方式與可寄放時間。",
                 "map": "The Parisian Macao",
-                "img": "bg2.png"
+                "img": "https://www.ahstatic.com/photos/6480_ho_03_p_2048x1536.jpg"
             },
             {
                 "time": "下午",
@@ -5300,7 +5465,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "石排灣郊野公園",
                 "note": "留意開放時段與週一休館規則，出發前再確認。",
                 "map": "Macao Giant Panda Pavilion",
-                "img": "bg.png"
+                "img": "https://cdn.hk01.com/di/media/images/dw/20230619/747518524427341824904813.jpeg/vnp27BwgObCu6nrhy4tRwizjXqaxcouW9Q0MBvUNDAY"
             },
             {
                 "time": "下午至傍晚",
@@ -5310,7 +5475,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "路環疊石塘山",
                 "note": "需要爬山步行，穿好走的鞋並預留體力與天色時間。",
                 "map": "A-Ma Cultural Village Macau",
-                "img": "bg23.png"
+                "img": "https://www.wh.mo/upload/mhImage/photo/1/20231122/154704-4.jpg"
             },
             {
                 "time": "晚上",
@@ -5320,7 +5485,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "澳門巴黎人",
                 "note": "晚上不再排固定景點，視體力休息。",
                 "map": "The Parisian Macao",
-                "img": "bg3.png"
+                "img": "https://www.ahstatic.com/photos/6480_ho_03_p_2048x1536.jpg"
             }
         ]
     },
@@ -5330,7 +5495,7 @@ body #page-day-detail .v6-day-selector::before {
         "loc": "自由活動 · 威尼斯人",
         "en": "Macau - Flexible Day & The Venetian",
         "quote": "睡到自然醒，留一天按心情慢慢玩。",
-        "img": "bg.png",
+        "img": "https://ak-d.tripcdn.com/images/1mi0y224x8x2rxb7xEFA0.jpg?proc=source%2Ftrip",
         "nodes": [
             {
                 "time": "睡到飽",
@@ -5340,7 +5505,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "早餐／早午餐自由安排",
                 "note": "你有留意喜公館，可以當作候選；出發前確認店址與營業時間。",
                 "map": "喜公館 澳門",
-                "img": "bg3.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             },
             {
                 "time": "下午",
@@ -5350,7 +5515,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "依當天精神與天氣決定",
                 "note": "保留彈性，不預先塞滿行程。",
                 "map": "Macau",
-                "img": "bg2.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             },
             {
                 "time": "可選行程",
@@ -5360,7 +5525,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "自然景點／步行路線",
                 "note": "若想再走走，可先確認路線、天氣與現場安全指示；不想走就直接回飯店休息。",
                 "map": "蝙蝠洞 澳門",
-                "img": "bg23.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             },
             {
                 "time": "下午至晚上",
@@ -5370,7 +5535,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "The Venetian Macao",
                 "note": "搭乘室內貢多拉船，再到百貨商場逛逛。",
                 "map": "The Venetian Macao",
-                "img": "bg2.png"
+                "img": "https://ak-d.tripcdn.com/images/1mi0y224x8x2rxb7xEFA0.jpg?proc=source%2Ftrip"
             },
             {
                 "time": "晚上",
@@ -5380,7 +5545,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "澳門巴黎人",
                 "note": "買點喜歡的食物，回飯店整理行李，為隔天離澳做準備。",
                 "map": "The Parisian Macao",
-                "img": "bg3.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             }
         ]
     },
@@ -5390,7 +5555,7 @@ body #page-day-detail .v6-day-selector::before {
         "loc": "澳門 · 回程日",
         "en": "Macau - Departure Day",
         "quote": "最後整理行李，預留交通與出境時間，平安返程。",
-        "img": "bg2.png",
+        "img": "https://www.ahstatic.com/photos/6480_ho_03_p_2048x1536.jpg",
         "nodes": [
             {
                 "time": "早上",
@@ -5400,7 +5565,7 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "澳門巴黎人",
                 "note": "退房與行李安排依飯店規定；出發前確認交通方式。",
                 "map": "The Parisian Macao",
-                "img": "bg.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             },
             {
                 "time": "出發前",
@@ -5410,11 +5575,11 @@ body #page-day-detail .v6-day-selector::before {
                 "addr": "依你的返程交通安排",
                 "note": "班機或船班時間尚未提供，先保留彈性並預留交通緩衝。",
                 "map": "Macau International Airport",
-                "img": "bg23.png"
+                "img": "https://media.timeout.com/images/105812999/1536/864/image.jpg"
             }
         ]
     }
-};
+}
 
         let currentDay = 1;
 
@@ -5696,7 +5861,7 @@ body #page-day-detail .v6-day-selector::before {
             scrollContainer.innerHTML = `
                 <div class="header-art-zone">
                     <img src="${dayHeaderArt.src}" class="autumn-header-art" alt="${dayHeaderArt.alt}" style="transform:rotate(${dayHeaderArt.rotate}deg);" onerror="this.style.display='none'">
-                    <img src="${dayStamp.src}" class="seal-stamp-art" alt="DAY ${data.day} 旅行印章" style="width:${dayStamp.width}px; top:${dayStamp.top}px; right:${dayStamp.right}px; transform:rotate(${dayStamp.rotate}deg);" onerror="this.style.display='none'">
+                    <img src="${dayStamp.src}" class="seal-stamp-art" alt="DAY ${data.day} 澳門旅行紀念章" style="width:${dayStamp.width}px; top:${dayStamp.top}px; right:${dayStamp.right}px; transform:rotate(${dayStamp.rotate}deg);" onerror="this.style.display='none'">
                     <img src="mapleleaf05.png" class="autumn-leaf-float leaf-a" alt="" onerror="this.style.display='none'">
 
                     <h1 class="day-big-title">DAY ${data.day}</h1>
@@ -5712,7 +5877,7 @@ body #page-day-detail .v6-day-selector::before {
                 </nav>
 
                 <div class="section-title-divider">
-                    <span>今日の行程</span>
+                    <span>每日行程</span>
                     <img src="tower2.png" class="mini-stamp-icon" alt="" onerror="this.style.display='none'">
                     <div class="divider-line"></div>
                 </div>
@@ -6066,7 +6231,7 @@ body #page-day-detail .v6-day-selector::before {
         };
 
         /* ================= 匯率換算邏輯 (即時 + 離線支援) ================= */
-        let currentRate = parseFloat(localStorage.getItem('keihan_cached_rate')) || 0.215;
+        let currentRate = parseFloat(localStorage.getItem('macau_cached_rate')) || 4.05;
 
         async function fetchLiveRate(forceRefresh = false) {
             const statusEl = document.getElementById('rateStatusText');
@@ -6081,20 +6246,20 @@ body #page-day-detail .v6-day-selector::before {
             if (statusEl) statusEl.textContent = '（正在抓取最新匯率…）';
 
             try {
-                const url = 'https://open.er-api.com/v6/latest/JPY' + (forceRefresh ? '?t=' + Date.now() : '');
+                const url = 'https://open.er-api.com/v6/latest/MOP' + (forceRefresh ? '?t=' + Date.now() : '');
                 const res = await fetch(url, { cache: 'no-store' });
                 if (!res.ok) throw new Error('rate fetch failed');
                 const data = await res.json();
                 if (!data || !data.rates || !data.rates.TWD) throw new Error('invalid rate data');
 
                 currentRate = parseFloat(Number(data.rates.TWD).toFixed(4));
-                localStorage.setItem('keihan_cached_rate', currentRate);
-                localStorage.setItem('keihan_cached_rate_time', Date.now().toString());
+                localStorage.setItem('macau_cached_rate', currentRate);
+                localStorage.setItem('macau_cached_rate_time', Date.now().toString());
                 if (rateInput) rateInput.value = currentRate;
                 if (statusEl) statusEl.textContent = '（已連線：已自動更新最新匯率）';
 
-                if (document.getElementById('inputJPY')?.value) calcJPYtoTWD();
-                else if (document.getElementById('inputTWD')?.value) calcTWDtoJPY();
+                if (document.getElementById('inputMOP')?.value) calcMOPtoTWD();
+                else if (document.getElementById('inputTWD')?.value) calcTWDtoMOP();
             } catch (e) {
                 if (statusEl) statusEl.textContent = '（抓取失敗：暫用上次成功取得的匯率）';
             }
@@ -6109,21 +6274,21 @@ body #page-day-detail .v6-day-selector::before {
             const val = parseFloat(document.getElementById('customRateInput').value);
             if (!isNaN(val) && val > 0) {
                 currentRate = val;
-                localStorage.setItem('keihan_cached_rate', currentRate);
-                calcJPYtoTWD();
+                localStorage.setItem('macau_cached_rate', currentRate);
+                calcMOPtoTWD();
             }
         }
 
-        function calcJPYtoTWD() {
-            const jpy = parseFloat(document.getElementById('inputJPY').value) || 0;
+        function calcMOPtoTWD() {
+            const mop = parseFloat(document.getElementById('inputMOP').value) || 0;
             const t = document.getElementById('inputTWD');
-            if (t) t.value = jpy ? Math.round(jpy * currentRate) : '';
+            if (t) t.value = mop ? Math.round(mop * currentRate) : '';
         }
 
-        function calcTWDtoJPY() {
+        function calcTWDtoMOP() {
             const twd = parseFloat(document.getElementById('inputTWD').value) || 0;
-            const j = document.getElementById('inputJPY');
-            if (j) j.value = twd ? Math.round(twd / currentRate) : '';
+            const mopInput = document.getElementById('inputMOP');
+            if (mopInput) mopInput.value = twd ? Math.round(twd / currentRate) : '';
         }
 
 
